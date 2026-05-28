@@ -77,6 +77,13 @@
 
   <!-- ── HOME PAGE ────────────────────────────────────────── -->
   <div id="page-home" class="page">
+
+  <!-- ── EVENT-BANNER (gesteuert via content.json → event_banner) ─────── -->
+  <div id="event-banner" role="alert" aria-live="polite" style="display:none">
+    <p id="event-banner-text"></p>
+    <a id="event-banner-link" href="#" class="event-banner-link" style="display:none"></a>
+  </div>
+
 <!-- ── HERO ────────────────────────────────────────────── -->
   <header id="hero">
     <div class="hero-bg" aria-hidden="true"></div>
@@ -104,14 +111,6 @@
 
     <p class="hero-meta" aria-hidden="true">Seit 1999 · Gräfrath</p>
   </header>
-
-  <!-- ── EVENT-BANNER (gesteuert via content.json → event_banner) ─────── -->
-  <div id="event-banner" role="alert" aria-live="polite" style="display:none">
-    <div class="container event-banner-inner">
-      <p id="event-banner-text"></p>
-      <a id="event-banner-link" href="#" class="event-banner-link" style="display:none"></a>
-    </div>
-  </div>
 
   <!-- ── BANNER STRIP ─────────────────────────────────────── -->
   <div class="banner-strip" role="complementary" aria-label="Kurzinfos">

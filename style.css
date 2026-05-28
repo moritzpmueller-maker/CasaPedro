@@ -2256,17 +2256,17 @@
 
     /* ─── EVENT-BANNER ──────────────────────────────────────── */
     #event-banner {
-      background: var(--terra);
-      color: var(--cream);
+      background: #C0000A;
+      color: #fff;
       text-align: center;
-      padding: 0.75rem var(--pad-x);
-    }
-    .event-banner-inner {
+      padding: 0.8rem var(--pad-x);
+      margin-top: 80px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 1.25rem;
       flex-wrap: wrap;
+      width: 100%;
     }
     #event-banner-text {
       font-family: var(--ff-body);
