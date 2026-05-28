@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Pedro – Spanisches Restaurant Solingen</title>
+
+  <!-- SEO ─────────────────────────────────────────────────────────────────
+       Bitte alle drei "IHRE-DOMAIN.de"-Stellen durch die echte Domain
+       ersetzen, sobald diese feststeht (z. B. casa-pedro.de).
+  ───────────────────────────────────────────────────────────────────────── -->
+  <meta name="description" content="Casa Pedro – Authentisches spanisches Restaurant in Solingen-Gräfrath seit 1999. Frische Tapas, Paella und Fischspezialitäten. Catering, Feiern & Reservierungen.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://IHRE-DOMAIN.de/">
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn, …) -->
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="Casa Pedro">
+  <meta property="og:locale"      content="de_DE">
+  <meta property="og:title"       content="Casa Pedro – Spanisches Restaurant Solingen">
+  <meta property="og:description" content="Authentisches spanisches Restaurant in Solingen-Gräfrath seit 1999. Frische Tapas, Paella und Fischspezialitäten. Catering &amp; Feiern.">
+  <meta property="og:url"         content="https://IHRE-DOMAIN.de/">
+  <meta property="og:image"       content="https://IHRE-DOMAIN.de/images/hero.jpg">
+  <meta property="og:image:alt"   content="Casa Pedro – Spanisches Restaurant Solingen">
+  <meta property="og:image:width"  content="1600">
+  <meta property="og:image:height" content="900">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Casa Pedro – Spanisches Restaurant Solingen">
+  <meta name="twitter:description" content="Authentisches spanisches Restaurant in Solingen-Gräfrath seit 1999. Frische Tapas, Paella und Fischspezialitäten.">
+  <meta name="twitter:image"       content="https://IHRE-DOMAIN.de/images/hero.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────── -->
+  <nav aria-label="Hauptnavigation">
+    <a href="javascript:void(0)" class="nav-logo" onclick="goTo('home');return false;"><img src="images/logo.png" alt="Casa Pedro Logo"><span class="nav-brand">Casa Pedro</span></a>
+    <button class="nav-burger" aria-label="Menü öffnen" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="javascript:void(0)" onclick="goTo('home','#geschichte');return false;">Restaurant</a></li>
+      <li><a href="javascript:void(0)" onclick="goTo('speisekarte');return false;">Speisekarte</a></li>
+      <li><a href="javascript:void(0)" onclick="goTo('catering');return false;">Catering &amp; Events</a></li>
+      <li><a href="javascript:void(0)" onclick="goTo('home','#kontakt');return false;" class="nav-cta">Kontakt</a></li>
+    </ul>
+  </nav>
+<div class="nav-overlay" onclick="closeNavMenu()"></div>
+
+<div id="menu-subnav-fixed" class="menu-subnav" role="navigation" aria-label="Speisekarten-Navigation" style="display:none">
+  <span class="menu-subnav-header">Speisen</span>
+  <div class="menu-subnav-sep"></div>
+    <a href="#menu-ensaladas" class="menu-subnav-link" onclick="menuNavClick('menu-ensaladas'); return false;"><span class="menu-subnav-dot"></span><span class="menu-subnav-label">Ensaladas</span></a>
+    <a href="#menu-entremeses-frios" class="menu-subnav-link" onclick="menuNavClick('menu-entremeses-frios'); return false;"><span class="menu-subnav-dot"></span><span class="menu-subnav-label">Kalte Vorspeisen</span></a>
+    <a href="#menu-entremeses-calientes" class="menu-subnav-link" onclick="menuNavClick('menu-entremeses-calientes'); return false;"><span class="menu-subnav-dot"></span><span class="menu-subnav-label">Warme Vorspeisen</span></a>
+    <a href="#menu-sopas" class="menu-subnav-link" onclick="menuNavClick('menu-sopas'); return false;"><span class="menu-subnav-dot"></span><span class="menu-subnav-label">Suppen</span></a>
+    <a href="#menu-pescados" class="menu-subnav-link" onclick="menuNavClick('menu-pescados'); return false;"><span class="menu-subnav-dot"></span><span class="menu-subnav-label">Fisch</span></a>
+    <a href="#menu-carnes" class="menu-subnav-link" onclick="menuNavClick('menu-carnes'); return false;"><span class="menu-subnav-dot"></span><span class="menu-subnav-label">Fleisch</span></a>
+    <a href="#menu-pollo" class="menu-subnav-link" onclick="menuNavClick('menu-pollo'); return false;"><span class="menu-subnav-dot"></span><span class="menu-subnav-label">Hähnchen</span></a>
+    <a href="#menu-especialidades" class="menu-subnav-link" onclick="menuNavClick('menu-especialidades'); return false;"><span class="menu-subnav-dot"></span><span class="menu-subnav-label">Spezialitäten</span></a>
+    <a href="#menu-postres" class="menu-subnav-link" onclick="menuNavClick('menu-postres'); return false;"><span class="menu-subnav-dot"></span><span class="menu-subnav-label">Dessert</span></a>
+    <a href="#menu-bebidas-calientes" class="menu-subnav-link" onclick="menuNavClick('menu-bebidas-calientes'); return false;"><span class="menu-subnav-dot"></span><span class="menu-subnav-label">Warme Getränke</span></a>
+    <a href="#menu-bebidas" class="menu-subnav-link" onclick="menuNavClick('menu-bebidas'); return false;"><span class="menu-subnav-dot"></span><span class="menu-subnav-label">Getränke</span></a>
+    <a href="#menu-vinos" class="menu-subnav-link" onclick="menuNavClick('menu-vinos'); return false;"><span class="menu-subnav-dot"></span><span class="menu-subnav-label">Weine</span></a>
+  </div>
+
+
+  
+
+  <!-- ── HOME PAGE ────────────────────────────────────────── -->
+  <div id="page-home" class="page">
+<!-- ── HERO ────────────────────────────────────────────── -->
+  <header id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-arch" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Spanisches Restaurant · Solingen</p>
+      <h1 class="hero-title">
+        Casa<br>
+        <em>Pedro</em>
+      </h1>
+      <p class="hero-subtitle">
+        Authentische spanische Küche, zubereitet mit Leidenschaft
+        und den frischesten Zutaten – mitten im Bergischen Land.
+      </p>
+      <div class="hero-actions">
+        <a href="javascript:void(0)" onclick="goTo('home','#kontakt');return false;" class="btn-primary">Tisch reservieren</a>
+        <a href="javascript:void(0)" onclick="goTo('speisekarte');return false;" class="btn-ghost">
+          Unsere Speisekarte
+          <span class="btn-ghost-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+
+    <p class="hero-meta" aria-hidden="true">Seit 1999 · Gräfrath</p>
+  </header>
+
+  <!-- ── EVENT-BANNER (gesteuert via content.json → event_banner) ─────── -->
+  <div id="event-banner" role="alert" aria-live="polite" style="display:none">
+    <div class="container event-banner-inner">
+      <p id="event-banner-text"></p>
+      <a id="event-banner-link" href="#" class="event-banner-link" style="display:none"></a>
+    </div>
+  </div>
+
+  <!-- ── BANNER STRIP ─────────────────────────────────────── -->
+  <div class="banner-strip" role="complementary" aria-label="Kurzinfos">
+    <span>📍 <strong>Gräfrath, Solingen</strong></span>
+    <span>🕐 Mo–Sa <strong>17:00 – 23:00</strong> · So <strong>12:00 – 21:00</strong></span>
+    <span>🍷 <strong>Catering</strong> auf Anfrage</span>
+    <span>☎ <a href="tel:+49212590023" style="color: var(--amber); text-decoration: none;"><strong>Jetzt anrufen</strong></a></span>
+  </div>
+
+
+  <!-- ── UNSERE GESCHICHTE ────────────────────────────────── -->
+  <section id="geschichte" aria-labelledby="geschichte-title">
+    <div class="container">
+      <div class="geschichte-grid">
+
+        <!-- Bild links -->
+        <div class="geschichte-img-wrap">
+          <img src="images/foto-geschichte.jpg" alt="Casa Pedro – Chef vor dem Restaurant" class="geschichte-img" width="600" height="520">
+        </div>
+
+        <!-- Text rechts -->
+        <div class="geschichte-text">
+          <span class="section-label">Unsere Geschichte</span>
+          <h2 class="section-title" id="geschichte-title">Tradition trifft<br>Authentizität</h2>
+
+          <div class="ornament" aria-hidden="true">
+            <div class="ornament-diamond"></div>
+          </div>
+
+          <div class="geschichte-body">
+            <p>
+              <strong>Seit 1999</strong> ist Casa Pedro ein Wahrzeichen spanischer Gastlichkeit
+              in Solingen. Was als Traum begann, authentische spanische Küche in die
+              Region zu bringen, ist heute eine <strong>erfolgreiche Familientradition</strong>.
+            </p>
+            <p>
+              Unser stilvoll eingerichtetes Restaurant steht für <strong>feine spanische
+              Spezialitäten</strong>, zubereitet nach traditionellen Rezepten mit den frischesten
+              Zutaten – bekannt weit über die Grenzen von Solingen hinaus.
+            </p>
+            <p>
+              <strong>À la carte:</strong> Spanische Klänge, gedämpftes Licht und liebevoll
+              gedeckte Tische, gepaart mit landestypischen Speisen – das ist der Rahmen für
+              einen unvergesslichen Abend im „Casa Pedro".
+            </p>
+          </div>
+
+          <div class="geschichte-facts" aria-label="Eckdaten">
+            <div class="fact">
+              <p class="fact-number">25+</p>
+              <p class="fact-label">Jahre Erfahrung</p>
+            </div>
+            <div class="fact">
+              <p class="fact-number">100%</p>
+              <p class="fact-label">Frische Zutaten</p>
+            </div>
+            <div class="fact">
+              <p class="fact-number">∞</p>
+              <p class="fact-label">Leidenschaft</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── REZENSIONEN ──────────────────────────────────────── -->
+  <section id="rezensionen" aria-labelledby="rezensionen-title">
+    <div class="rezensionen-inner">
+
+      <div class="rezensionen-header">
+        <span class="section-label">Google Rezensionen</span>
+        <h2 class="section-title" id="rezensionen-title">Was unsere Gäste sagen</h2>
+        <div class="ornament" aria-hidden="true"><div class="ornament-diamond"></div></div>
+      </div>
+
+      <div class="google-rating-wrap">
+        <a href="https://www.google.com/travel/search?gsas=1&ts=EggKAggDCgIIAxocEhoSFAoHCOoPEAUYDxIHCOoPEAUYEBgBMgIQAA&qs=MhNDZ29JdU82b2k0N0xoclV3RUFFOAI&ap=ugEHcmV2aWV3cw&ictx=111&biw=1440&bih=778&hl=de-DE&ved=0CAAQ5JsGahcKEwjw15ijl7uUAxUAAAAAHQAAAAAQBA" target="_blank" rel="noopener" class="google-rating" aria-label="Casa Pedro auf Google Maps – Bewertung ansehen">
+          <img src="images/icon-google.png" alt="Google Maps" class="google-rating-logo">
+          <div class="google-rating-divider" aria-hidden="true"></div>
+          <div class="google-rating-right">
+            <span class="google-rating-score">4,6</span>
+            <span class="google-rating-stars">★★★★★</span>
+            <span class="google-rating-label">550+ Rezensionen auf Google Maps</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="rezensionen-grid">
+
+        <!-- Featured – linke Spalte, beide Zeilen -->
+        <article class="review-card review-card--featured">
+          <div class="review-header">
+            <div class="review-avatar review-avatar--terra" aria-hidden="true">F</div>
+            <div class="review-header-meta">
+              <span class="review-header-name">Federico Elicer</span>
+              <span class="review-header-date">vor 5 Monaten · Google</span>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+          <p class="review-text">
+            „Ein fantastisches spanisches Restaurant. Das gesamte Lokal ist wunderschön gestaltet
+            und strahlt gleichzeitig eine warme und gemütliche Atmosphäre aus. Meine Kollegen waren
+            von der Weinauswahl begeistert, und als Chilene, der die Produkte seiner Heimatküste
+            liebt, kann ich bestätigen, dass die Merluza a la plancha perfekt gewürzt und gebraten
+            war. Ein wirklich exzellentes kulinarisches Erlebnis."
+          </p>
+          <div class="review-subscores" aria-label="Detailbewertungen">
+            <div class="review-subscore">
+              <span class="review-subscore-value">5,0</span>
+              <span class="review-subscore-label">Zimmer</span>
+            </div>
+            <div class="review-subscore">
+              <span class="review-subscore-value">5,0</span>
+              <span class="review-subscore-label">Service</span>
+            </div>
+            <div class="review-subscore">
+              <span class="review-subscore-value">5,0</span>
+              <span class="review-subscore-label">Ort</span>
+            </div>
+          </div>
+          <a href="https://www.google.com/travel/search?gsas=1&ts=EggKAggDCgIIAxocEhoSFAoHCOoPEAUYDxIHCOoPEAUYEBgBMgIQAA&qs=MhNDZ29JdU82b2k0N0xoclV3RUFFOAI&ap=ugEHcmV2aWV3cw&ictx=111&biw=1440&bih=778&hl=de-DE&ved=0CAAQ5JsGahcKEwjw15ijl7uUAxUAAAAAHQAAAAAQBA" target="_blank" rel="noopener" class="review-google-link" aria-label="Rezension auf Google ansehen">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.33 0 9.25-3.65 9.25-9.09 0-1.15-.15-1.81-.15-1.81z"/></svg>
+            Auf Google ansehen
+          </a>
+        </article>
+
+        <!-- Kompakt oben rechts -->
+        <article class="review-card review-card--compact">
+          <div class="review-header">
+            <div class="review-avatar review-avatar--terra" aria-hidden="true">T</div>
+            <div class="review-header-meta">
+              <span class="review-header-name">Tina L.</span>
+              <span class="review-header-date">vor einem Jahr · Google</span>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+          <p class="review-text">
+            „Heute das erste Mal draußen gesessen – es ist herrlich hier. Das Essen und der Service
+            sind einfach fantastisch. Ich freue mich schon auf den nächsten Besuch!"
+          </p>
+          <a href="https://www.google.com/travel/search?gsas=1&ts=EggKAggDCgIIAxocEhoSFAoHCOoPEAUYDxIHCOoPEAUYEBgBMgIQAA&qs=MhNDZ29JdU82b2k0N0xoclV3RUFFOAI&ap=ugEHcmV2aWV3cw&ictx=111&biw=1440&bih=778&hl=de-DE&ved=0CAAQ5JsGahcKEwjw15ijl7uUAxUAAAAAHQAAAAAQBA" target="_blank" rel="noopener" class="review-google-link" aria-label="Rezension auf Google ansehen">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.33 0 9.25-3.65 9.25-9.09 0-1.15-.15-1.81-.15-1.81z"/></svg>
+            Auf Google ansehen
+          </a>
+        </article>
+
+        <!-- Kompakt unten rechts -->
+        <article class="review-card review-card--compact">
+          <div class="review-header">
+            <div class="review-avatar review-avatar--amber" aria-hidden="true">S</div>
+            <div class="review-header-meta">
+              <span class="review-header-name">Stefan Ellenbruch</span>
+              <span class="review-header-date">vor einem Jahr · Google</span>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+          <p class="review-text">
+            „Der Service war großartig, die Atmosphäre absolut authentisch, das Essen einfach
+            großartig. War das erste Mal dort – aber definitiv nicht das letzte Mal."
+          </p>
+          <a href="https://www.google.com/travel/search?gsas=1&ts=EggKAggDCgIIAxocEhoSFAoHCOoPEAUYDxIHCOoPEAUYEBgBMgIQAA&qs=MhNDZ29JdU82b2k0N0xoclV3RUFFOAI&ap=ugEHcmV2aWV3cw&ictx=111&biw=1440&bih=778&hl=de-DE&ved=0CAAQ5JsGahcKEwjw15ijl7uUAxUAAAAAHQAAAAAQBA" target="_blank" rel="noopener" class="review-google-link" aria-label="Rezension auf Google ansehen">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.33 0 9.25-3.65 9.25-9.09 0-1.15-.15-1.81-.15-1.81z"/></svg>
+            Auf Google ansehen
+          </a>
+        </article>
+
+      </div>
+
+      <div class="rezensionen-cta">
+        <a href="https://www.google.com/travel/search?gsas=1&ts=EggKAggDCgIIAxocEhoSFAoHCOoPEAUYDxIHCOoPEAUYEBgBMgIQAA&qs=MhNDZ29JdU82b2k0N0xoclV3RUFFOAI&ap=ugEHcmV2aWV3cw&ictx=111&biw=1440&bih=778&hl=de-DE&ved=0CAAQ5JsGahcKEwjw15ijl7uUAxUAAAAAHQAAAAAQBA" target="_blank" rel="noopener">
+          Alle Rezensionen auf Google Maps
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ── KONTAKT & ÖFFNUNGSZEITEN ──────────────────────────── -->
+  <section id="kontakt" aria-labelledby="kontakt-title">
+    <div class="kontakt-inner">
+
+      <div class="kontakt-header">
+        <span class="section-label">Besuchen Sie uns</span>
+        <h2 class="section-title" id="kontakt-title">Kontakt &amp; Öffnungszeiten</h2>
+        <div class="ornament" aria-hidden="true">
+          <div class="ornament-diamond"></div>
+        </div>
+      </div>
+
+      <div class="kontakt-grid">
+
+        <!-- Spalte 1: Kontaktinfos -->
+        <div class="kontakt-block-info">
+          <h3>So erreichen Sie uns</h3>
+
+          <div class="kontakt-item">
+            <div class="kontakt-item-icon" aria-hidden="true">📍</div>
+            <div>
+              <p class="kontakt-item-label">Adresse</p>
+              <p class="kontakt-item-value">In der Freiheit 42<br>42653 Solingen</p>
+            </div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-item-icon" aria-hidden="true">☎</div>
+            <div>
+              <p class="kontakt-item-label">Telefon</p>
+              <p class="kontakt-item-value"><a href="tel:+49212590023">0212 590023</a></p>
+            </div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-item-icon kontakt-item-icon--mail" aria-hidden="true">✉</div>
+            <div>
+              <p class="kontakt-item-label">E-Mail</p>
+              <p class="kontakt-item-value"><a href="mailto:restaurant@casa-pedro.de">restaurant@casa-pedro.de</a></p>
+            </div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-item-icon kontakt-item-icon--insta" aria-hidden="true"></div>
+            <div>
+              <p class="kontakt-item-label">Instagram</p>
+              <p class="kontakt-item-value"><a href="https://www.instagram.com/restaurantcasapedro/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener">@restaurantcasapedro</a></p>
+            </div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="kontakt-item-icon kontakt-item-icon--social" aria-hidden="true"><img src="images/icon-facebook.png" alt="Facebook"></div>
+            <div>
+              <p class="kontakt-item-label">Facebook</p>
+              <p class="kontakt-item-value"><a href="https://www.facebook.com/p/Casa-Pedro-100054356809630/" target="_blank" rel="noopener">Casa Pedro</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spalte 2: Öffnungszeiten -->
+        <div class="kontakt-block-oez">
+          <h3>Öffnungszeiten</h3>
+
+          <div class="oez-quote">
+            „Jeder Besuch bei uns ist eine kleine Reise nach Spanien."
+            <span>— Casa Pedro, Gräfrath</span>
+          </div>
+
+          <div id="oez-rows">
+            <div class="oez-row">
+              <span class="oez-day">Montag – Samstag</span>
+              <span class="oez-time">17:00 – 23:00</span>
+            </div>
+            <div class="oez-row">
+              <span class="oez-day">Sonntag</span>
+              <span class="oez-time">12:00 – 21:00</span>
+            </div>
+          </div>
+
+          <p class="oez-note" id="oez-hinweis">An Feiertagen können die Öffnungszeiten abweichen. Bitte rufen Sie vorab an.</p>
+        </div>
+
+        <!-- Spalte 3: Reservierung -->
+        <div class="kontakt-block-reservierung" role="complementary" aria-label="Tischreservierung">
+          <span class="reservierung-eyebrow">Tisch reservieren</span>
+          <p class="reservierung-title">Ihren Abend bei uns planen</p>
+          <div class="reservierung-divider" aria-hidden="true"></div>
+
+          <form id="reservierung-form"
+                name="reservierung"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                novalidate>
+            <input type="hidden" name="form-name" value="reservierung">
+            <p style="display:none"><label>Nicht ausfüllen: <input name="bot-field"></label></p>
+
+            <div class="form-field">
+              <label for="r-name">Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="r-name" name="name" required autocomplete="name" placeholder="Ihr Name">
+            </div>
+
+            <div class="form-field">
+              <label for="r-email">E-Mail <span aria-hidden="true">*</span></label>
+              <input type="email" id="r-email" name="email" required autocomplete="email" placeholder="ihre@email.de">
+            </div>
+
+            <div class="form-field">
+              <label for="r-telefon">Telefon <span class="form-optional">(optional)</span></label>
+              <input type="tel" id="r-telefon" name="telefon" autocomplete="tel" placeholder="+49 …">
+            </div>
+
+            <div class="form-field">
+              <label for="r-personen">Anzahl Personen <span aria-hidden="true">*</span></label>
+              <select id="r-personen" name="personen" required>
+                <option value="" disabled selected>Bitte wählen</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 Personen</option>
+                <option value="3">3 Personen</option>
+                <option value="4">4 Personen</option>
+                <option value="5">5 Personen</option>
+                <option value="6">6 Personen</option>
+                <option value="7">7 Personen</option>
+                <option value="8">8 Personen</option>
+                <option value="9">9 Personen</option>
+                <option value="10+">10+ Personen</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="r-datum">Datum <span aria-hidden="true">*</span></label>
+              <input type="date" id="r-datum" name="datum" required>
+            </div>
+
+            <div class="form-field">
+              <label for="r-uhrzeit">Uhrzeit <span aria-hidden="true">*</span></label>
+              <select id="r-uhrzeit" name="uhrzeit" required>
+                <option value="" disabled selected>Bitte wählen</option>
+                <option>17:00</option><option>17:30</option>
+                <option>18:00</option><option>18:30</option>
+                <option>19:00</option><option>19:30</option>
+                <option>20:00</option><option>20:30</option>
+                <option>21:00</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="r-hinweise">Weitere Hinweise <span class="form-optional">(optional)</span></label>
+              <textarea id="r-hinweise" name="hinweise" rows="3" placeholder="Allergien, besondere Anlässe, …"></textarea>
+            </div>
+
+            <button type="submit" class="reservierung-btn">Anfrage senden</button>
+          </form>
+
+          <div id="reservierung-erfolg" style="display:none" role="status" aria-live="polite">
+            <p class="reservierung-erfolg-msg">Vielen Dank! Ihre Anfrage wurde gesendet.<br>Pedro meldet sich in Kürze bei Ihnen.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  
+  </div>
+
+  <!-- ── SPEISEKARTE PAGE ─────────────────────────────────── -->
+    <div id="page-speisekarte" class="page">
+
+  <div class="speisekarte-inner">
+
+    <div class="speisekarte-page-header">
+      <img src="images/watermark.png" alt="Casa Pedro" class="page-logo">
+      <span class="section-label">Unsere Küche</span>
+      <h2 class="section-title">Speisekarte 2026</h2>
+      <div class="ornament" aria-hidden="true"><div class="ornament-diamond"></div></div>
+      <p class="speisekarte-vat">Alle Preise inkl. ges. MwSt. · All prices inclusive of VAT</p>
+    </div>
+
+    <!-- ── SPECIALS (gesteuert via content.json → specials) ─────────────── -->
+    <div id="specials-section" style="display:none" aria-label="Tagesspecials">
+      <div class="menu-section specials-menu-section">
+        <h3 class="menu-section-title">
+          <span class="lang-es">Specials de hoy</span>
+          <span class="lang-sep">·</span>
+          <span class="lang-de">Tagesspecials</span>
+        </h3>
+        <div id="specials-grid"></div>
+      </div>
+      <div class="menu-section-sep" aria-hidden="true"><div class="menu-section-sep-diamond"></div></div>
+    </div>
+
+    <div class="menu-section-sep" aria-hidden="true"><div class="menu-section-sep-diamond"></div></div>
+
+    <!-- SALATE -->
+    <div class="menu-section">
+      <div id="menu-ensaladas" class="menu-anchor"></div>
+    <h3 class="menu-section-title"><span class="lang-es">Ensaladas</span><span class="lang-sep">·</span><span class="lang-de">Salate</span><span class="lang-sep">·</span><span class="lang-en">Salads</span></h3>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Ensalada mixta</p><p class="menu-row-desc">Gemischter Salat <span class="allergen">(G,7)</span> · Mixed salad</p></div><p class="menu-row-price" data-price-key="ensaladas.ensalada_mixta">8,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Ensalada de tomate con atún</p><p class="menu-row-desc">Tomaten-Thunfisch-Salat <span class="allergen">(D,G,7)</span> · Tomato-tuna salad</p></div><p class="menu-row-price" data-price-key="ensaladas.ensalada_tomate_atun">10,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Ensalada de la casa</p><p class="menu-row-desc">Salat nach Art des Hauses <span class="allergen">(C,D,G,7)</span> · Salad à la maison</p></div><p class="menu-row-price" data-price-key="ensaladas.ensalada_de_la_casa">13,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Ensalada mixta con pollo</p><p class="menu-row-desc">Hähnchen-Salat <span class="allergen">(G,7)</span> · Chicken salad</p></div><p class="menu-row-price" data-price-key="ensaladas.ensalada_mixta_con_pollo">14,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Ensalada „Los Amigos"</p><p class="menu-row-desc">Salat „Los Amigos" <span class="allergen">(E,I,7)</span> · Salad „Los Amigos"</p></div><p class="menu-row-price" data-price-key="ensaladas.ensalada_los_amigos">19,50&nbsp;€</p></div>
+    </div>
+
+    <div class="menu-section-sep" aria-hidden="true"><div class="menu-section-sep-diamond"></div></div>
+
+    <!-- KALTE VORSPEISEN -->
+    <div class="menu-section">
+      <div id="menu-entremeses-frios" class="menu-anchor"></div>
+    <h3 class="menu-section-title"><span class="lang-es">Entremeses Fríos</span><span class="lang-sep">·</span><span class="lang-de">Kalte Vorspeisen</span><span class="lang-sep">·</span><span class="lang-en">Cold starters</span></h3>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Pan con Alioli</p><p class="menu-row-desc">Brot mit Alioli <span class="allergen">(A,B,C)</span> · Bread with Alioli</p></div><p class="menu-row-price" data-price-key="entremeses_frios.pan_con_alioli">6,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Aceitunas</p><p class="menu-row-desc">Oliven <span class="allergen">(3,5,6,7)</span> · Olives</p></div><p class="menu-row-price" data-price-key="entremeses_frios.aceitunas">6,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Queso Manchego</p><p class="menu-row-desc">Manchego Käse <span class="allergen">(A)</span> · Manchego cheese</p></div><p class="menu-row-price" data-price-key="entremeses_frios.queso_manchego">12,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Jamón Serrano / Ibérico</p><p class="menu-row-desc">Serrano / Ibérico Schinken · Serrano / Iberico ham</p></div><p class="menu-row-price-split" data-price-key="entremeses_frios.jamon_serrano_iberico">12,50&nbsp;€ / 21,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Jamón con melón</p><p class="menu-row-desc">Melone mit Schinken · Melon with ham</p></div><p class="menu-row-price" data-price-key="entremeses_frios.jamon_con_melon">14,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Boquerones en vinagre</p><p class="menu-row-desc">Eingelegte Sardellen <span class="allergen">(D)</span> · Pickled anchovies</p></div><p class="menu-row-price" data-price-key="entremeses_frios.boquerones_en_vinagre">9,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Alcachofas a la vinagreta</p><p class="menu-row-desc">Artischocken in Vinaigrette · Artichokes in french dressing</p></div><p class="menu-row-price" data-price-key="entremeses_frios.alcachofas_vinagreta">9,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Pimientos del Piquillo</p><p class="menu-row-desc">Eingelegte rote Paprika · Pickled red pepper</p></div><p class="menu-row-price" data-price-key="entremeses_frios.pimientos_del_piquillo">9,50&nbsp;€</p></div>
+    </div>
+
+    <div class="menu-section-sep" aria-hidden="true"><div class="menu-section-sep-diamond"></div></div>
+
+    <!-- WARME VORSPEISEN -->
+    <div class="menu-section">
+      <div id="menu-entremeses-calientes" class="menu-anchor"></div>
+    <h3 class="menu-section-title"><span class="lang-es">Entremeses Calientes</span><span class="lang-sep">·</span><span class="lang-de">Warme Vorspeisen</span><span class="lang-sep">·</span><span class="lang-en">Warm starters</span></h3>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Calamares „Romana"</p><p class="menu-row-desc">Tintenfischringe „Romana" <span class="allergen">(B,I)</span> · Squid rings „Romana"</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.calamares_romana">12,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Calamares „Tenerife"</p><p class="menu-row-desc">Tintenfischringe „Tenerife" <span class="allergen">(B,I)</span> · Squid rings „Tenerife"</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.calamares_tenerife">12,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Boquerones fritos</p><p class="menu-row-desc">Frittierte Sardellen <span class="allergen">(B,D)</span> · Fried anchovies</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.boquerones_fritos">10,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Pulpo al ajillo</p><p class="menu-row-desc">Oktopus in Knoblauch <span class="allergen">(I)</span> · Octopus in garlic</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.pulpo_al_ajillo">13,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Gambas a la plancha</p><p class="menu-row-desc">Krabben, gegrillt <span class="allergen">(E)</span> · Prawns, grilled</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.gambas_a_la_plancha">12,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Gambas rebozadas</p><p class="menu-row-desc">Krabben in Bierteig <span class="allergen">(B,E)</span> · Prawns in pastry made with beer</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.gambas_rebozadas">13,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Gambas al ajillo</p><p class="menu-row-desc">Krabben in Knoblauch <span class="allergen">(E)</span> · Prawns in garlic</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.gambas_al_ajillo">13,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Gambas de la casa</p><p class="menu-row-desc">Krabben nach Art des Hauses <span class="allergen">(A,E)</span> · Prawns à la maison</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.gambas_de_la_casa">13,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Champiñones al ajillo</p><p class="menu-row-desc">Champignons in Knoblauch <span class="allergen">(B)</span> · Mushrooms in garlic</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.champinones_al_ajillo">10,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Pimientos de Padrón</p><p class="menu-row-desc">Paprika, gebraten mit grobem Meersalz · Green peppers, fried with coarse sea salt</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.pimientos_de_padron">10,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Cazuela de carne</p><p class="menu-row-desc">Fleischtopf · Stew with meat</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.cazuela_de_carne">9,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Caracoles de la casa</p><p class="menu-row-desc">Schnecken nach Art des Hauses <span class="allergen">(A)</span> · Escargots à la maison</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.caracoles_de_la_casa">9,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Patatas bravas</p><p class="menu-row-desc">Scharfe Kartoffeln · Spicy potatoes</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.patatas_bravas">6,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Patatas con Alioli</p><p class="menu-row-desc">Kartoffeln mit Alioli <span class="allergen">(A,C)</span> · Potatoes with Alioli</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.patatas_con_alioli">6,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Espagueti con salmón y gambas</p><p class="menu-row-desc">Spaghetti mit Lachs und Krabben <span class="allergen">(A,B,D,E,F)</span> · Spaghetti with salmon and prawns</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.espagueti_salmon_gambas">19,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Entremeses fríos y calientes</p><p class="menu-row-desc">Kalte und warme Vorspeisen <span class="allergen">(B,D,E,I,7)</span> · Cold and warm mixed starter plate</p></div><p class="menu-row-price" data-price-key="entremeses_calientes.entremeses_frios_y_calientes">15,50&nbsp;€</p></div>
+    </div>
+
+    <div class="menu-section-sep" aria-hidden="true"><div class="menu-section-sep-diamond"></div></div>
+
+    <!-- SUPPEN -->
+    <div class="menu-section">
+      <div id="menu-sopas" class="menu-anchor"></div>
+    <h3 class="menu-section-title"><span class="lang-es">Sopas</span><span class="lang-sep">·</span><span class="lang-de">Suppen</span><span class="lang-sep">·</span><span class="lang-en">Soups</span></h3>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Sopa de tomate</p><p class="menu-row-desc">Tomatensuppe <span class="allergen">(A)</span> · Tomatosoup</p></div><p class="menu-row-price" data-price-key="sopas.sopa_de_tomate">7,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Sopa de pescado</p><p class="menu-row-desc">Fischsuppe <span class="allergen">(D,E,I)</span> · Fishsoup</p></div><p class="menu-row-price" data-price-key="sopas.sopa_de_pescado">13,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Sopa de ajo</p><p class="menu-row-desc">Knoblauchsuppe <span class="allergen">(A,B)</span> · Garlicsoup</p></div><p class="menu-row-price" data-price-key="sopas.sopa_de_ajo">9,00&nbsp;€</p></div>
+    </div>
+
+    <div class="menu-section-sep" aria-hidden="true"><div class="menu-section-sep-diamond"></div></div>
+
+    <!-- FISCH -->
+    <div class="menu-section">
+      <div id="menu-pescados" class="menu-anchor"></div>
+    <h3 class="menu-section-title"><span class="lang-es">Pescados</span><span class="lang-sep">·</span><span class="lang-de">Fischgerichte</span><span class="lang-sep">·</span><span class="lang-en">Fish</span></h3>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Merluza a la plancha</p><p class="menu-row-desc">Seehecht, gegrillt mit Salzkartoffeln &amp; Gemüse <span class="allergen">(D)</span></p></div><p class="menu-row-price" data-price-key="pescados.merluza_a_la_plancha">19,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Merluza a la „Marinera"</p><p class="menu-row-desc">Seehecht „Marinera" mit Reis &amp; Gemüse <span class="allergen">(D,E,I)</span></p></div><p class="menu-row-price" data-price-key="pescados.merluza_marinera">22,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Merluza en salsa verde</p><p class="menu-row-desc">Seehecht in grüner Soße mit Reis &amp; Gemüse <span class="allergen">(B,D)</span></p></div><p class="menu-row-price" data-price-key="pescados.merluza_salsa_verde">22,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Rape a la plancha</p><p class="menu-row-desc">Seeteufel, gegrillt mit Salzkartoffeln &amp; Gemüse <span class="allergen">(D)</span></p></div><p class="menu-row-price" data-price-key="pescados.rape_a_la_plancha">26,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Rape de la casa</p><p class="menu-row-desc">Seeteufel nach Art des Hauses mit Reis &amp; Gemüse <span class="allergen">(A,B,D,E,F,I)</span></p></div><p class="menu-row-price" data-price-key="pescados.rape_de_la_casa">27,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Rape en salsa verde</p><p class="menu-row-desc">Seeteufel in grüner Soße mit Reis &amp; Gemüse <span class="allergen">(B,D)</span></p></div><p class="menu-row-price" data-price-key="pescados.rape_salsa_verde">27,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Salmón a la plancha</p><p class="menu-row-desc">Lachs, gegrillt mit Salzkartoffeln &amp; Gemüse <span class="allergen">(D)</span></p></div><p class="menu-row-price" data-price-key="pescados.salmon_a_la_plancha">23,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Salmón con salsa de langosta</p><p class="menu-row-desc">Lachs in Hummersoße mit Reis &amp; Gemüse <span class="allergen">(A,B,D,E,F)</span></p></div><p class="menu-row-price" data-price-key="pescados.salmon_salsa_langosta">24,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Salmón con salsa de albahaca</p><p class="menu-row-desc">Lachs in Basilikumsoße mit Reis &amp; Gemüse <span class="allergen">(A,D)</span></p></div><p class="menu-row-price" data-price-key="pescados.salmon_salsa_albahaca">24,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Langostinos a la plancha</p><p class="menu-row-desc">Hummerkrabben, gegrillt mit Salzkartoffeln &amp; Gemüse <span class="allergen">(E)</span></p></div><p class="menu-row-price" data-price-key="pescados.langostinos_a_la_plancha">26,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Langostinos al Cava</p><p class="menu-row-desc">Hummerkrabben in Schaumweinsoße mit Reis &amp; Gemüse <span class="allergen">(A,E)</span></p></div><p class="menu-row-price" data-price-key="pescados.langostinos_al_cava">27,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Langostinos al „Pilpil"</p><p class="menu-row-desc">Hummerkrabben „Pilpil" mit Reis &amp; Gemüse <span class="allergen">(E)</span></p></div><p class="menu-row-price" data-price-key="pescados.langostinos_pilpil">27,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Parrillada de pescado</p><p class="menu-row-desc">Fischteller, gegrillt mit Salzkartoffeln &amp; Gemüse <span class="allergen">(D,E)</span></p></div><p class="menu-row-price" data-price-key="pescados.parrillada_de_pescado">24,00&nbsp;€</p></div>
+    </div>
+
+    <div class="menu-section-sep" aria-hidden="true"><div class="menu-section-sep-diamond"></div></div>
+
+    <!-- FLEISCH -->
+    <div class="menu-section">
+      <div id="menu-carnes" class="menu-anchor"></div>
+    <h3 class="menu-section-title"><span class="lang-es">Carnes</span><span class="lang-sep">·</span><span class="lang-de">Fleischgerichte</span><span class="lang-sep">·</span><span class="lang-en">Meat</span></h3>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Filete de cerdo en salsa de mostaza</p><p class="menu-row-desc">Schweinefilet in Senfsoße mit Kartoffelgratin &amp; Gemüse <span class="allergen">(A,G)</span></p></div><p class="menu-row-price" data-price-key="carnes.filete_cerdo_mostaza">19,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Filete de cerdo a la pimienta verde</p><p class="menu-row-desc">Schweinefilet in grüner Pfeffersoße mit Kartoffelgratin &amp; Gemüse <span class="allergen">(A,B,F)</span></p></div><p class="menu-row-price" data-price-key="carnes.filete_cerdo_pimienta_verde">19,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Filete de cerdo „Carboneras"</p><p class="menu-row-desc">Schweinefilet „Carboneras" mit Kartoffelgratin &amp; Gemüse <span class="allergen">(A,B,F)</span></p></div><p class="menu-row-price" data-price-key="carnes.filete_cerdo_carboneras">19,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Bisteck a la plancha</p><p class="menu-row-desc">Rumpsteak, gegrillt mit Folienkartoffel &amp; Gemüse</p></div><p class="menu-row-price" data-price-key="carnes.bisteck_a_la_plancha">31,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Bisteck a la pimienta verde</p><p class="menu-row-desc">Rumpsteak in grüner Pfeffersoße mit Kartoffelgratin &amp; Gemüse <span class="allergen">(A,B,F)</span></p></div><p class="menu-row-price" data-price-key="carnes.bisteck_pimienta_verde">32,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Bisteck con salsa de champiñones</p><p class="menu-row-desc">Rumpsteak in Champignonsoße mit Kartoffelgratin &amp; Gemüse <span class="allergen">(A,B,F)</span></p></div><p class="menu-row-price" data-price-key="carnes.bisteck_champinones">33,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Bisteck „Carboneras"</p><p class="menu-row-desc">Rumpsteak „Carboneras" mit Kartoffelgratin &amp; Gemüse <span class="allergen">(A,B,F)</span></p></div><p class="menu-row-price" data-price-key="carnes.bisteck_carboneras">32,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Solomillo de cordero a la plancha</p><p class="menu-row-desc">Lammfilet, gegrillt mit Folienkartoffel &amp; Gemüse</p></div><p class="menu-row-price" data-price-key="carnes.solomillo_cordero_plancha">26,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Solomillo de cordero a la pimienta verde</p><p class="menu-row-desc">Lammfilet in grüner Pfeffersoße mit Kartoffelgratin &amp; Gemüse <span class="allergen">(A,B,F)</span></p></div><p class="menu-row-price" data-price-key="carnes.solomillo_cordero_pimienta">27,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Solomillo de cordero con hierbas</p><p class="menu-row-desc">Lammfilet auf Kräutern mit Kartoffelgratin &amp; Gemüse <span class="allergen">(A,B,F)</span></p></div><p class="menu-row-price" data-price-key="carnes.solomillo_cordero_hierbas">28,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Parrillada de carne</p><p class="menu-row-desc">Gemischte Fleischplatte, gegrillt mit Folienkartoffel &amp; Gemüse</p></div><p class="menu-row-price" data-price-key="carnes.parrillada_de_carne">24,50&nbsp;€</p></div>
+    </div>
+
+    <div class="menu-section-sep" aria-hidden="true"><div class="menu-section-sep-diamond"></div></div>
+
+    <!-- HÄHNCHEN -->
+    <div class="menu-section">
+      <div id="menu-pollo" class="menu-anchor"></div>
+    <h3 class="menu-section-title"><span class="lang-es">Pollo</span><span class="lang-sep">·</span><span class="lang-de">Hähnchen</span><span class="lang-sep">·</span><span class="lang-en">Chicken</span></h3>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Pechuga de pollo al ajillo</p><p class="menu-row-desc">Hähnchenbrust in Knoblauchsoße mit Reis &amp; Gemüse <span class="allergen">(A,B,F)</span></p></div><p class="menu-row-price" data-price-key="pollo.pechuga_pollo_ajillo">19,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Ensalada de canónigos con pechuga de pollo</p><p class="menu-row-desc">Hähnchenbrust auf Feldsalat mit Folienkartoffel</p></div><p class="menu-row-price" data-price-key="pollo.ensalada_canonigos_pollo">19,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Pechuga de pollo en salsa de gambas</p><p class="menu-row-desc">Hähnchen in Krabbensoße mit Reis &amp; Gemüse <span class="allergen">(A,E)</span></p></div><p class="menu-row-price" data-price-key="pollo.pechuga_pollo_gambas">20,00&nbsp;€</p></div>
+    </div>
+
+    <div class="menu-section-sep" aria-hidden="true"><div class="menu-section-sep-diamond"></div></div>
+
+    <!-- SPEZIALITÄTEN -->
+    <div class="menu-section">
+      <div id="menu-especialidades" class="menu-anchor"></div>
+    <h3 class="menu-section-title"><span class="lang-es">Especialidades de la casa</span><span class="lang-sep">·</span><span class="lang-de">Spezialitäten des Hauses</span></h3>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Paella Especial – carne y pescado <span style="font-weight:400;font-size:0.82em;">(2 personas)</span></p><p class="menu-row-desc">Paella Spezial – Fleisch und Fisch <span class="allergen">(D,E,I)</span></p></div><p class="menu-row-price" data-price-key="especialidades.paella_especial">42,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Paella de pescado <span style="font-weight:400;font-size:0.82em;">(2 personas)</span></p><p class="menu-row-desc">Paella nur mit Fisch <span class="allergen">(D,E,I)</span></p></div><p class="menu-row-price" data-price-key="especialidades.paella_pescado">42,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Zarzuela de la casa <span style="font-weight:400;font-size:0.82em;">(2 personas)</span></p><p class="menu-row-desc">Fischtopf nach Art des Hauses mit Reis &amp; Gemüse <span class="allergen">(B,D,E,J)</span></p></div><p class="menu-row-price" data-price-key="especialidades.zarzuela_de_la_casa">48,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Langostinos „al Pedro"</p><p class="menu-row-desc">Hummerkrabben „al Pedro" mit Reis &amp; Gemüse <span class="allergen">(A,B,E,F)</span></p></div><p class="menu-row-price" data-price-key="especialidades.langostinos_al_pedro">27,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Conejo al ajillo</p><p class="menu-row-desc">Kaninchen in Knoblauch mit Folienkartoffel &amp; Gemüse <span class="allergen">(A,B,F)</span></p></div><p class="menu-row-price" data-price-key="especialidades.conejo_al_ajillo">23,50&nbsp;€</p></div>
+    </div>
+
+    <div class="menu-section-sep" aria-hidden="true"><div class="menu-section-sep-diamond"></div></div>
+
+    <!-- DESSERT -->
+    <div class="menu-section">
+      <div id="menu-postres" class="menu-anchor"></div>
+    <h3 class="menu-section-title"><span class="lang-es">Postres</span><span class="lang-sep">·</span><span class="lang-de">Dessert</span></h3>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Crema Catalana</p><p class="menu-row-desc"><span class="allergen">(A,B,C)</span></p></div><p class="menu-row-price" data-price-key="postres.crema_catalana">6,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Flan</p><p class="menu-row-desc">Caramelpudding <span class="allergen">(A,B,C)</span></p></div><p class="menu-row-price" data-price-key="postres.flan">7,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Helado mixto</p><p class="menu-row-desc">Gemischtes Eis <span class="allergen">(A)</span> · Mixed ice cream</p></div><p class="menu-row-price" data-price-key="postres.helado_mixto">6,50&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Helado de vainilla con chocolate caliente</p><p class="menu-row-desc">Vanilleeis mit heißer Schokolade <span class="allergen">(A,H)</span></p></div><p class="menu-row-price" data-price-key="postres.helado_vainilla_chocolate">8,00&nbsp;€</p></div>
+      <div class="menu-row"><div class="menu-row-info"><p class="menu-row-name">Postre sorpresa</p><p class="menu-row-desc">Überraschungsdessert <span class="allergen">(A,B,C,H)</span> · Surprise dessert</p></div><p class="menu-row-price" data-price-key="postres.postre_sorpresa">12,00&nbsp;€</p></div>
+    </div>
+
+    <div class="menu-section-sep" aria-hidden="true"><div class="menu-section-sep-diamond"></div></div>
+
+    <!-- WARME GETRÄNKE -->
+    <div class="menu-section">
+      <div id="menu-bebidas-calientes" class="menu-anchor"></div>
+    <div id="menu-bebidas" class="menu-anchor"></div>
+    <h3 class="menu-section-title"><span class="lang-es">Bebidas calientes</span><span class="lang-sep">·</span><span class="lang-de">Warme Getränke</span><span class="lang-sep">·</span><span class="lang-en">Hot beverages</span></h3>
+      <div class="menu-drinks-cols">
+        <div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Café americano</span><span class="menu-row-bev-price" data-price-key="bebidas_calientes.cafe_americano">3,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Cappuccino o Café con leche</span><span class="menu-row-bev-price" data-price-key="bebidas_calientes.cappuccino_cafe_leche">3,60&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Cortado</span><span class="menu-row-bev-price" data-price-key="bebidas_calientes.cortado">3,10&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Café solo</span><span class="menu-row-bev-price" data-price-key="bebidas_calientes.cafe_solo">2,90&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Café solo doble</span><span class="menu-row-bev-price" data-price-key="bebidas_calientes.cafe_solo_doble">4,40&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Carajillo <span class="menu-row-bev-vol">(mit Anis oder Brandy)</span></span><span class="menu-row-bev-price" data-price-key="bebidas_calientes.carajillo">5,00&nbsp;€</span></div>
+        </div>
+        <div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Té</span><span class="menu-row-bev-price" data-price-key="bebidas_calientes.te">3,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Té con ron</span><span class="menu-row-bev-price" data-price-key="bebidas_calientes.te_con_ron">5,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Cacao</span><span class="menu-row-bev-price" data-price-key="bebidas_calientes.cacao">3,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Cacao con nata</span><span class="menu-row-bev-price" data-price-key="bebidas_calientes.cacao_con_nata">3,70&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Leche, fría o caliente</span><span class="menu-row-bev-price" data-price-key="bebidas_calientes.leche">2,00&nbsp;€</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section-sep" aria-hidden="true"><div class="menu-section-sep-diamond"></div></div>
+
+    <!-- GETRÄNKE -->
+    <div class="menu-section">
+      <h3 class="menu-section-title"><span class="lang-es">Bebidas</span><span class="lang-sep">·</span><span class="lang-de">Getränke</span><span class="lang-sep">·</span><span class="lang-en">Beverages</span></h3>
+      <div class="menu-drinks-cols">
+        <div>
+          <p class="menu-drinks-subheading">Alkoholfrei</p>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Coca-Cola, Limo, Orangenlimo <span class="menu-row-bev-vol">0,25 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.cola_limo_025">3,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Coca-Cola, Limo, Orangenlimo <span class="menu-row-bev-vol">0,5 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.cola_limo_05">6,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Tonic Water, Bitter Lemon <span class="menu-row-bev-vol">0,2 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.tonic_water_02">3,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Ginger Ale <span class="menu-row-bev-vol">0,2 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.ginger_ale_02">3,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Mineralwasser <span class="menu-row-bev-vol">0,25 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.mineralwasser_025">3,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Mineralwasser <span class="menu-row-bev-vol">0,75 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.mineralwasser_075">6,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Apfelsaft 100% <span class="menu-row-bev-vol">0,2 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.apfelsaft_02">3,20&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Orangensaft 100% <span class="menu-row-bev-vol">0,25 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.orangensaft_025">3,20&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Apfelschorle <span class="menu-row-bev-vol">0,25 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.apfelschorle_025">3,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Apfelschorle <span class="menu-row-bev-vol">0,5 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.apfelschorle_05">5,80&nbsp;€</span></div>
+          <p class="menu-drinks-subheading">Bier · Beer</p>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Alkoholfrei <span class="menu-row-bev-vol">0,33 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.bier_alkoholfrei_033">3,20&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Alt <span class="menu-row-bev-vol">0,33 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.bier_alt_033">3,20&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Estrella <span class="menu-row-bev-vol">0,33 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.estrella_033">3,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Bitburger Pils <span class="menu-row-bev-vol">0,25 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.bitburger_025">2,90&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Bitburger Pils <span class="menu-row-bev-vol">0,5 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.bitburger_05">5,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Hofbräu Münchner Weisse <span class="menu-row-bev-vol">0,5 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.hofbrau_weisse_05">5,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Hofbräu Münchner Weisse alkoholfrei <span class="menu-row-bev-vol">0,5 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.hofbrau_weisse_alkoholfrei_05">5,00&nbsp;€</span></div>
+          <p class="menu-drinks-subheading">Sangría</p>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Copa · Glas <span class="menu-row-bev-vol">0,25 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.sangria_copa_025">8,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Jarra · Krug <span class="menu-row-bev-vol">0,5 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.sangria_jarra_05">14,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Jarra · Krug <span class="menu-row-bev-vol">1,0 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.sangria_jarra_10">25,00&nbsp;€</span></div>
+          <p class="menu-drinks-subheading">Cava · Spanischer Sekt</p>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Copa · Glas <span class="menu-row-bev-vol">0,1 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.cava_copa_01">7,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Botella · Flasche <span class="menu-row-bev-vol">0,75 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.cava_botella_075">35,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Aperol Spritz <span class="menu-row-bev-vol">0,2 l</span></span><span class="menu-row-bev-price" data-price-key="bebidas.aperol_spritz_02">7,50&nbsp;€</span></div>
+        </div>
+        <div>
+          <p class="menu-drinks-subheading">Spirituosen</p>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Aguardiente / Aquavit <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.aguardiente_aquavit">6,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Fernet Branca / Ramazotti <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.fernet_ramazotti">6,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Wodka / Tequila <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.wodka_tequila">6,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Gin <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.gin">8,00&nbsp;€</span></div>
+          <p class="menu-drinks-subheading">Liköre</p>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Anis, süß o. trocken <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.anis">6,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Licor 43 <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.licor_43">6,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Yerbas mallorquinas/ibicencas <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.yerbas">6,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Ponche <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.ponche">6,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Pacharán <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.pacharan">6,00&nbsp;€</span></div>
+          <p class="menu-drinks-subheading">Whiskey</p>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Johnnie Walker <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.johnnie_walker">8,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Jim Beam <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.jim_beam">7,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Chivas Regal <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.chivas_regal">10,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Jack Daniel's <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.jack_daniels">8,50&nbsp;€</span></div>
+          <p class="menu-drinks-subheading">Aperitifs</p>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Sherry dry/medium/cream <span class="menu-row-bev-vol">6 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.sherry">5,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Martini bianco/rosso <span class="menu-row-bev-vol">6 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.martini">5,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Campari pur/Soda/Orangensaft <span class="menu-row-bev-vol">6 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.campari">7,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Pernod <span class="menu-row-bev-vol">6 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.pernod">7,00&nbsp;€</span></div>
+          <p class="menu-drinks-subheading">Brandy</p>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">103, Terry, Veterano <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.brandy_103_terry">6,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Magno <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.magno">6,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">103 Negro <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.brandy_103_negro">7,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Carlos I. <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.carlos_i">8,00&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Gran Duque d'Alba / Cardenal Mendoza <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.gran_duque_cardenal">9,50&nbsp;€</span></div>
+          <div class="menu-row-beverage"><span class="menu-row-bev-name">Lepanto <span class="menu-row-bev-vol">4 cl</span></span><span class="menu-row-bev-price" data-price-key="bebidas.lepanto">9,50&nbsp;€</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section-sep" aria-hidden="true"><div class="menu-section-sep-diamond"></div></div>
+
+    <!-- WEINE -->
+    <div class="menu-section">
+      <div id="menu-vinos" class="menu-anchor"></div>
+    <h3 class="menu-section-title"><span class="lang-es">Vinos</span><span class="lang-sep">·</span><span class="lang-de">Offene Weine</span><span class="lang-sep">·</span><span class="lang-en">Open wines</span></h3>
+      <p class="menu-drinks-subheading">Rotwein · Red wine</p>
+      <div class="menu-row" style="align-items:flex-start;"><div class="menu-row-info"><p class="menu-row-name">Saisonaler Hauswein</p><p class="menu-wine-desc">Tempranillo-Garnacha. Dunkelrot, frisches fruchtbetontes Bukett, im Mund warm und sanft mit feinen Tanninen.</p></div><div class="menu-row-wine-prices"><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.rot_hauswein_02">5,50&nbsp;€</span><span class="menu-row-wine-vol">· 0,2 l</span></div><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.rot_hauswein_05">13,00&nbsp;€</span><span class="menu-row-wine-vol">· 0,5 l</span></div><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.rot_hauswein_10">22,00&nbsp;€</span><span class="menu-row-wine-vol">· 1,0 l</span></div></div></div>
+      <div class="menu-row" style="align-items:flex-start;"><div class="menu-row-info"><p class="menu-row-name">Rioja</p><p class="menu-wine-desc">Tempranillo. Leichter Rotwein mit toller Frucht und weichem Gerbstoff. Duftet nach orientalischen Gewürzen, Zedernholz und reifen Kirschen. Barriqueausbau.</p></div><div class="menu-row-wine-prices"><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.rot_rioja_02">6,50&nbsp;€</span><span class="menu-row-wine-vol">· 0,2 l</span></div><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.rot_rioja_05">14,50&nbsp;€</span><span class="menu-row-wine-vol">· 0,5 l</span></div><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.rot_rioja_075">19,00&nbsp;€</span><span class="menu-row-wine-vol">· 0,75 l</span></div></div></div>
+      <p class="menu-drinks-subheading">Weißwein · White wine</p>
+      <div class="menu-row" style="align-items:flex-start;"><div class="menu-row-info"><p class="menu-row-name">Saisonaler Hauswein</p><p class="menu-wine-desc">Macabeo. Klarer Weißwein mit feiner Struktur, angenehm leicht und bekömmlich. Frisch und fruchtig – trocken, mild, moderat Säure und große Balance.</p></div><div class="menu-row-wine-prices"><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.weiss_hauswein_02">5,50&nbsp;€</span><span class="menu-row-wine-vol">· 0,2 l</span></div><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.weiss_hauswein_05">13,00&nbsp;€</span><span class="menu-row-wine-vol">· 0,5 l</span></div><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.weiss_hauswein_10">22,00&nbsp;€</span><span class="menu-row-wine-vol">· 1,0 l</span></div></div></div>
+      <div class="menu-row" style="align-items:flex-start;"><div class="menu-row-info"><p class="menu-row-name">Rioja</p><p class="menu-wine-desc">Viura-Chardonnay. Leuchtend gelbe Farbe. Im Aroma Früchte wie Zitrone, Ananas und Mango. Frischer, sehr angenehmer Wein mit ausgewogener Säure.</p></div><div class="menu-row-wine-prices"><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.weiss_rioja_02">6,50&nbsp;€</span><span class="menu-row-wine-vol">· 0,2 l</span></div><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.weiss_rioja_05">14,50&nbsp;€</span><span class="menu-row-wine-vol">· 0,5 l</span></div><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.weiss_rioja_075">19,00&nbsp;€</span><span class="menu-row-wine-vol">· 0,75 l</span></div></div></div>
+      <p class="menu-drinks-subheading">Roséwein · Rosé wine</p>
+      <div class="menu-row" style="align-items:flex-start;"><div class="menu-row-info"><p class="menu-row-name">Saisonaler Hauswein</p><p class="menu-wine-desc">Tempranillo. Rosa mit Noten von reifen Johannisbeeren. In der Nase intensive Aromen roter Früchte. Fruchtig-frisch im Mund, kombiniert mit einem langen und strukturierten Abgang.</p></div><div class="menu-row-wine-prices"><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.rose_hauswein_02">5,50&nbsp;€</span><span class="menu-row-wine-vol">· 0,2 l</span></div><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.rose_hauswein_05">13,00&nbsp;€</span><span class="menu-row-wine-vol">· 0,5 l</span></div><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.rose_hauswein_10">22,00&nbsp;€</span><span class="menu-row-wine-vol">· 1,0 l</span></div></div></div>
+      <div class="menu-row" style="align-items:flex-start;"><div class="menu-row-info"><p class="menu-row-name">Rioja</p><p class="menu-wine-desc">Garnacha Tinta. Weicher lachsfarbener Roséwein mit einer blumig-fruchtigen Note in der Nase. Im Mund dezente Säure kombiniert mit einem Anflug von Mandelnote.</p></div><div class="menu-row-wine-prices"><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.rose_rioja_02">6,50&nbsp;€</span><span class="menu-row-wine-vol">· 0,2 l</span></div><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.rose_rioja_05">14,50&nbsp;€</span><span class="menu-row-wine-vol">· 0,5 l</span></div><div class="wine-price-pair"><span class="menu-row-wine-price" data-price-key="vinos.rose_rioja_075">19,00&nbsp;€</span><span class="menu-row-wine-vol">· 0,75 l</span></div></div></div>
+    </div>
+
+    <!-- ALLERGENHINWEIS -->
+    <div class="menu-footnote">
+      <div class="menu-footnote-row">
+        <span class="menu-footnote-label">Allergene</span>
+        <span class="menu-footnote-items">
+          <span class="fn-key">A</span> Laktose &ensp;
+          <span class="fn-key">B</span> Gluten &ensp;
+          <span class="fn-key">C</span> Eier &ensp;
+          <span class="fn-key">D</span> Fisch &ensp;
+          <span class="fn-key">E</span> Krebstiere &ensp;
+          <span class="fn-key">F</span> Sellerie &ensp;
+          <span class="fn-key">G</span> Senf &ensp;
+          <span class="fn-key">H</span> Schalenfrüchte &ensp;
+          <span class="fn-key">I</span> Weichtiere &ensp;
+          <span class="fn-key">J</span> Schwefeldioxid &amp; Sulphite &ensp;
+          <span class="fn-key">K</span> Erdnüsse &ensp;
+          <span class="fn-key">L</span> Soja &ensp;
+          <span class="fn-key">M</span> Sesam &ensp;
+          <span class="fn-key">N</span> Lupine
+        </span>
+      </div>
+      <div class="menu-footnote-row">
+        <span class="menu-footnote-label">Zusatzstoffe</span>
+        <span class="menu-footnote-items">
+          <span class="fn-key">1</span> Farbstoff &ensp;
+          <span class="fn-key">2</span> chininhaltig &ensp;
+          <span class="fn-key">3</span> Antioxidationsmittel &ensp;
+          <span class="fn-key">4</span> koffeinhaltig &ensp;
+          <span class="fn-key">5</span> Konservierungsstoffe &ensp;
+          <span class="fn-key">6</span> Geschmacksverstärker &ensp;
+          <span class="fn-key">7</span> geschwärzt &ensp;
+          <span class="fn-key">8</span> gewachst &ensp;
+          <span class="fn-key">9</span> Phosphat &ensp;
+          <span class="fn-key">*</span> Süßungsmittel (enthält Phenylalaninquelle)
+        </span>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+  <!-- ── CATERING PAGE ───────────────────────────────────── -->
+  <div id="page-catering" class="page">
+
+  <!-- ── 1. Catering & Events ──────────────────────────── -->
+  <section class="catering-hero" aria-labelledby="catering-title">
+    <div class="catering-hero-inner">
+
+      <!-- Page header with watermark logo -->
+      <header class="catering-page-header">
+        <img src="images/watermark.png" alt="" class="page-logo" aria-hidden="true">
+        <span class="section-label">Außer Haus</span>
+        <h1 class="section-title" id="catering-title">Catering &amp; Events</h1>
+        <div class="ornament" aria-hidden="true"><div class="ornament-diamond"></div></div>
+      </header>
+
+      <!-- Banner image placeholder -->
+      <div class="catering-banner-frame">
+        <img src="images/foto-catering-banner.jpg" alt="La Casita Catering am Marktplatz Gräfrath">
+      </div>
+
+      <!-- Text + photo mosaic -->
+      <div class="catering-content-grid">
+        <div class="catering-text-col">
+          <p class="catering-body-lead">Natürlich bietet die Küche des Restaurants „Casa Pedro" auch eine Vielzahl von spanischen und internationalen Speisen als Catering-Service für Einweihungen, Familien-, Firmenfeiern oder Großevents an.</p>
+          <p class="catering-body">Neben exquisitem Fingerfood und eindrucksvollen Buffets ist immer wieder die XXL-Paella-Pfanne das Highlight einer jeden Veranstaltung. Wir freuen uns auf Ihre Anfrage!</p>
+          <ul class="catering-list">
+            <li>Individuelle Menüplanung nach Ihren Wünschen</li>
+            <li>Verpflegung für Gruppen von 10 bis 200+ Personen</li>
+            <li>Kompletter Service inklusive Auf- und Abbau</li>
+            <li>Spanische Showelemente: Live-Paella, Tapas-Buffet</li>
+            <li>Persönliche Beratung und Kostproben auf Anfrage</li>
+          </ul>
+          <a href="javascript:void(0)" onclick="goTo('home','#kontakt');return false;" class="catering-cta">Angebot anfragen</a>
+        </div>
+
+        <div class="catering-photo-col" aria-hidden="true">
+          <div class="catering-photo-frame catering-pf-1">
+            <img src="images/foto-catering-1.jpg" alt="Catering Buffet">
+          </div>
+          <div class="catering-photo-frame catering-pf-2">
+            <img src="images/foto-catering-2.jpg" alt="Meeresfrüchte">
+          </div>
+          <div class="catering-photo-frame catering-pf-4">
+            <img src="images/foto-catering-3.jpg" alt="La Casita Bar">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 1.2 La Casita ─────────────────────────────────── -->
+  <section class="casita-section" aria-label="La Casita">
+    <div class="casita-inner">
+
+      <div class="casita-photo-wrap">
+        <div class="casita-photo-frame">
+          <img src="images/foto-casita.jpg" alt="La Casita Catering Truck">
+        </div>
+      </div>
+
+      <div class="casita-text">
+        <span class="casita-eyebrow">Highlight</span>
+        <h2 class="section-title">La Casita</h2>
+        <div class="ornament" aria-hidden="true"><div class="ornament-diamond"></div></div>
+        <p class="casita-highlight">„Mit La Casita haben wir einen weiteren Hingucker."</p>
+        <p class="casita-body">Unser liebevoll restaurierter Kleinwagen ist der perfekte Begleiter für Ihre Veranstaltung. Er zieht Blicke auf sich, sorgt für Gesprächsstoff und bringt das besondere Flair Spaniens direkt zu Ihrem Anlass.</p>
+        <div class="casita-tags">
+          <span class="casita-tag">Hochzeiten</span>
+          <span class="casita-tag">Firmenfeiern</span>
+          <span class="casita-tag">Großevents</span>
+          <span class="casita-tag">Fotomotiv</span>
+          <span class="casita-tag">Auf Anfrage</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 2. Feiern ─────────────────────────────────────── -->
+  <section class="feiern-section" aria-labelledby="feiern-title">
+    <div class="feiern-inner">
+
+      <div class="feiern-photo-col" aria-hidden="true">
+        <div class="feiern-photo-frame feiern-pf-1">
+          <img src="images/foto-feiern-1.jpg" alt="Service im Restaurant Casa Pedro">
+        </div>
+        <div class="feiern-photo-frame feiern-pf-2">
+          <img src="images/foto-feiern-2.jpg" alt="Festlich gedeckter Saal im Casa Pedro">
+        </div>
+      </div>
+
+      <div class="feiern-text-col">
+        <span class="section-label">Im Restaurant</span>
+        <h2 class="section-title" id="feiern-title">Feiern</h2>
+        <div class="ornament" aria-hidden="true"><div class="ornament-diamond"></div></div>
+        <p class="feiern-tagline">Mit Kind und Kegel…</p>
+        <p class="feiern-body-lead">Nutzen Sie die unverwechselbare Atmosphäre im Restaurant „Casa Pedro" für Ihre Familienfeier.</p>
+        <p class="feiern-body">Ob Taufe, Geburtstag, Hochzeit oder Trauerfeier, das „Casa Pedro" bietet für jeden Anlass den geeigneten Rahmen. Auch tagsüber sind wir gerne für Sie da. Sprechen Sie uns an!</p>
+        <div class="feiern-capacity">
+          <div class="feiern-cap-card">
+            <span class="feiern-cap-number">60</span>
+            <span class="feiern-cap-label">Innenplätze</span>
+          </div>
+          <div class="feiern-cap-card">
+            <span class="feiern-cap-number">+40</span>
+            <span class="feiern-cap-label">Außenplätze</span>
+          </div>
+          <div class="feiern-cap-card">
+            <span class="feiern-cap-number">∞</span>
+            <span class="feiern-cap-label">Anlässe</span>
+          </div>
+        </div>
+        <a href="javascript:void(0)" onclick="goTo('home','#kontakt');return false;" class="catering-cta" style="margin-top:2rem;">Tisch reservieren</a>
+      </div>
+
+    </div>
+  </section>
+
+  </div>
+
+  <!-- ── IMPRESSUM PAGE ──────────────────────────────────────── -->
+  <div id="page-impressum" class="page">
+    <div class="legal-page">
+      <span class="section-label">Rechtliches</span>
+      <h1 class="section-title">Impressum</h1>
+      <div class="legal-layout">
+        <main class="legal-content">
+          <div class="legal-block">
+            <h3>Angaben gemäß § 5 TMG</h3>
+            <address>
+              Pedro Hernandez<br>
+              Casa Pedro<br>
+              In der Freiheit 42<br>
+              42653 Solingen
+            </address>
+          </div>
+
+          <div class="legal-block">
+            <h3>Kontakt</h3>
+            <table class="legal-table">
+              <tr>
+                <td>Telefon</td>
+                <td><a href="tel:+49212590023">0212 590023</a></td>
+              </tr>
+              <tr>
+                <td>E-Mail</td>
+                <td><a href="mailto:restaurant@casa-pedro.de">restaurant@casa-pedro.de</a></td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="legal-block">
+            <h3>Verantwortlich für den Inhalt</h3>
+            <p>Pedro Hernandez<br>In der Freiheit 42 · 42653 Solingen</p>
+          </div>
+
+          <div class="legal-block">
+            <h3>Haftungsausschluss</h3>
+            <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+          </div>
+        </main>
+      <aside class="legal-sidebar">
+        <div class="legal-sidebar-card">
+          <h4>Casa Pedro</h4>
+          <p class="sidebar-address">In der Freiheit 42 · 42653 Solingen</p>
+
+          <h5>Öffnungszeiten</h5>
+          <table class="legal-oez-table">
+            <tr><td>Montag – Samstag</td><td>17:00 – 23:00</td></tr>
+            <tr><td>Sonntag</td><td>12:00 – 21:00</td></tr>
+          </table>
+
+          <div class="legal-reservierung">
+            <h5>Reservierung</h5>
+            <p style="font-size:0.88rem;color:var(--text-mid);">0212 590023</p>
+            <a href="tel:+49212590023">Jetzt anrufen</a>
+          </div>
+        </div>
+      </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DATENSCHUTZ PAGE ─────────────────────────────────────── -->
+  <div id="page-datenschutz" class="page">
+    <div class="legal-page">
+      <span class="section-label">Rechtliches</span>
+      <h1 class="section-title">Datenschutzerklärung</h1>
+      <div class="legal-layout">
+        <main class="legal-content">
+          <div class="legal-block">
+            <h3>Verantwortlicher</h3>
+            <address>
+              Pedro Hernandez<br>
+              Casa Pedro<br>
+              In der Freiheit 42<br>
+              42653 Solingen<br>
+              Telefon: <a href="tel:+49212590023">0212 590023</a><br>
+              E-Mail: <a href="mailto:restaurant@casa-pedro.de">restaurant@casa-pedro.de</a>
+            </address>
+          </div>
+
+          <div class="legal-block">
+            <h3>Allgemeines</h3>
+            <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies auf Basis der jeweils genannten Rechtsgrundlage. Eine Weitergabe an Dritte zu Werbezwecken findet nicht statt; die technische Verarbeitung durch unseren Hosting-Anbieter ist im Abschnitt „Hosting" beschrieben.</p>
+            <p>Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+            <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit ausdrücklich widersprochen.</p>
+          </div>
+
+          <div class="legal-block">
+            <h3>Cookies</h3>
+            <p>Diese Webseite verwendet keine Cookies und erhebt keine personenbezogenen Daten über den Besuch hinaus. Es werden keine Tracking- oder Analysedienste eingesetzt.</p>
+          </div>
+
+          <div class="legal-block">
+            <h3>Hosting</h3>
+            <p>Diese Website wird gehostet bei <strong>Netlify Inc.</strong>, San Francisco, CA, USA. Beim Aufruf der Website werden technische Zugriffsdaten (u.&nbsp;a. IP-Adresse, Browsertyp sowie Datum und Uhrzeit des Abrufs) in den Server-Logs von Netlify gespeichert. Die Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses am sicheren und stabilen Betrieb der Website (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO). Da Netlify in den USA ansässig ist, werden diese Daten in ein Drittland übermittelt. Informationen zu den von Netlify eingesetzten Schutzmaßnahmen entnehmen Sie der <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">Datenschutzerklärung von Netlify</a>.</p>
+          </div>
+
+          <div class="legal-block">
+            <h3>Reservierungsformular</h3>
+            <p>Auf unserer Website steht ein Online-Formular zur Anfrage einer Tischreservierung zur Verfügung. Bei Nutzung dieses Formulars werden folgende Daten erhoben:</p>
+            <ul>
+              <li>Name <em>(Pflichtfeld)</em></li>
+              <li>E-Mail-Adresse <em>(Pflichtfeld)</em></li>
+              <li>Telefonnummer <em>(freiwillig)</em></li>
+              <li>Gewünschtes Datum <em>(Pflichtfeld)</em></li>
+              <li>Gewünschte Uhrzeit <em>(Pflichtfeld)</em></li>
+              <li>Anzahl der Personen <em>(Pflichtfeld)</em></li>
+              <li>Weitere Hinweise, z.&nbsp;B. Allergien oder besondere Anlässe <em>(freiwillig)</em></li>
+            </ul>
+            <p><strong>Zweck und Rechtsgrundlage:</strong> Die Daten werden ausschließlich zur Bearbeitung Ihrer Tischreservierungsanfrage verwendet. Rechtsgrundlage ist Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO (Vertragsanbahnung).</p>
+            <p><strong>Übermittlung an Netlify:</strong> Die Formulardaten werden durch Netlify Inc. (USA) technisch empfangen und in deren Systemen gespeichert, bis wir sie löschen. Informationen zu den Schutzmaßnahmen für diese Drittlandübermittlung finden Sie im Abschnitt „Hosting" sowie in der <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">Datenschutzerklärung von Netlify</a>. Pedro Hernandez erhält die Anfragen per E-Mail und bearbeitet sie manuell.</p>
+            <p><strong>Speicherdauer:</strong> Ihre Daten werden nur so lange aufbewahrt, wie es für die Bearbeitung Ihrer Anfrage erforderlich ist. Nach abgeschlossener oder abgelehnter Reservierung werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+          </div>
+
+          <div class="legal-block">
+            <h3>Ihre Rechte</h3>
+            <p>Sie haben gegenüber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten:</p>
+            <ul>
+              <li><strong>Auskunftsrecht</strong> (Art.&nbsp;15 DSGVO)</li>
+              <li><strong>Recht auf Berichtigung</strong> (Art.&nbsp;16 DSGVO)</li>
+              <li><strong>Recht auf Löschung</strong> (Art.&nbsp;17 DSGVO)</li>
+              <li><strong>Recht auf Einschränkung der Verarbeitung</strong> (Art.&nbsp;18 DSGVO)</li>
+              <li><strong>Recht auf Datenübertragbarkeit</strong> (Art.&nbsp;20 DSGVO)</li>
+              <li><strong>Widerspruchsrecht</strong> (Art.&nbsp;21 DSGVO)</li>
+            </ul>
+            <p>Zur Geltendmachung Ihrer Rechte wenden Sie sich bitte an die im Impressum angegebene Adresse oder an <a href="mailto:restaurant@casa-pedro.de">restaurant@casa-pedro.de</a>.</p>
+            <p>Darüber hinaus haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren (Art.&nbsp;77 DSGVO). Die zuständige Aufsichtsbehörde für Nordrhein-Westfalen ist die <strong>Landesbeauftragte für Datenschutz und Informationsfreiheit NRW</strong>, <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener">www.ldi.nrw.de</a>.</p>
+          </div>
+
+          <div class="legal-block">
+            <h3>Kontakt bei Datenschutzfragen</h3>
+            <p>Pedro Hernandez · Casa Pedro<br>
+            In der Freiheit 42 · 42653 Solingen<br>
+            <a href="mailto:restaurant@casa-pedro.de">restaurant@casa-pedro.de</a></p>
+          </div>
+        </main>
+      <aside class="legal-sidebar">
+        <div class="legal-sidebar-card">
+          <h4>Casa Pedro</h4>
+          <p class="sidebar-address">In der Freiheit 42 · 42653 Solingen</p>
+
+          <h5>Öffnungszeiten</h5>
+          <table class="legal-oez-table">
+            <tr><td>Montag – Samstag</td><td>17:00 – 23:00</td></tr>
+            <tr><td>Sonntag</td><td>12:00 – 21:00</td></tr>
+          </table>
+
+          <div class="legal-reservierung">
+            <h5>Reservierung</h5>
+            <p style="font-size:0.88rem;color:var(--text-mid);">0212 590023</p>
+            <a href="tel:+49212590023">Jetzt anrufen</a>
+          </div>
+        </div>
+      </aside>
+      </div>
+    </div>
+  </div>
+
+<!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer>
+    <p class="footer-logo">Casa <span>Pedro</span></p>
+    <p>Spanisches Restaurant · Solingen · Seit 1999</p>
+    <p>© 2026 Casa Pedro. Alle Rechte vorbehalten.</p>
+    <ul class="footer-links">
+      <li><a href="javascript:void(0)" onclick="goTo('impressum');return false;">Impressum</a></li>
+      <li><a href="javascript:void(0)" onclick="goTo('datenschutz');return false;">Datenschutz</a></li>
+      <li><a href="javascript:void(0)" onclick="goTo('home','#kontakt');return false;">Kontakt</a></li>
+    </ul>
+  </footer>
+
+
+  <script src="main.js"></script>
+
+</body>
+</html>

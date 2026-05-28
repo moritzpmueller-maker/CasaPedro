@@ -1,0 +1,290 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Sveltia CMS – Casa Pedro
+# Backend: GitHub via DecapBridge (Pedro braucht keinen GitHub-Account)
+#
+# NACH dem GitHub-Setup: "GITHUB_USERNAME" durch den echten GitHub-Nutzernamen
+# ersetzen (z. B. pedro-mueller).
+# ─────────────────────────────────────────────────────────────────────────────
+
+backend:
+  name: github
+  repo: moritzpmueller-maker/CasaPedro
+  branch: main
+  base_url: https://decapbridge.com
+  auth_endpoint: v1/openid/callback
+
+locale: de
+media_folder: images
+public_folder: /images
+
+# ─────────────────────────────────────────────────────────────────────────────
+collections:
+  - name: einstellungen
+    label: "Website-Inhalte"
+    files:
+
+      # ── Hauptdatei ──────────────────────────────────────────────────────────
+      - name: content
+        label: "Alle Inhalte bearbeiten"
+        file: content.json
+        format: json
+        fields:
+
+          # ── Öffnungszeiten ─────────────────────────────────────────────────
+          - label: "Öffnungszeiten"
+            name: oeffnungszeiten
+            widget: object
+            fields:
+              - label: "Zeilen"
+                name: zeilen
+                widget: list
+                label_singular: "Zeile"
+                fields:
+                  - { label: "Tage (z. B. Montag – Samstag)", name: tage,    widget: string }
+                  - { label: "Uhrzeit (z. B. 17:00 – 23:00)", name: uhrzeit, widget: string }
+              - label: "Feiertags-Hinweis"
+                name: hinweis
+                widget: string
+
+          # ── Tagesspecials ──────────────────────────────────────────────────
+          - label: "Tagesspecials (Speisekarte)"
+            name: specials
+            widget: object
+            fields:
+              - label: "Specials anzeigen?"
+                name: aktiv
+                widget: boolean
+                default: false
+                hint: "Einschalten, um die Specials-Sektion oben auf der Speisekarte anzuzeigen."
+              - label: "Einträge"
+                name: eintraege
+                widget: list
+                label_singular: "Special"
+                fields:
+                  - { label: "Gerichtname",   name: name,         widget: string }
+                  - { label: "Beschreibung",  name: beschreibung, widget: string, required: false }
+                  - { label: "Preis (z. B. 12,50)", name: preis,  widget: string }
+
+          # ── Event-Banner ───────────────────────────────────────────────────
+          - label: "Event-Banner (Startseite)"
+            name: event_banner
+            widget: object
+            fields:
+              - label: "Banner anzeigen?"
+                name: aktiv
+                widget: boolean
+                default: false
+                hint: "Einschalten, um den Banner unter dem Hero-Bild anzuzeigen."
+              - { label: "Bannertext",  name: text,      widget: string,  required: false }
+              - { label: "Link-URL",    name: link_url,  widget: string,  required: false, hint: "Optional – leer lassen wenn kein Link gewünscht." }
+              - { label: "Link-Text",   name: link_text, widget: string,  required: false, hint: "z. B. «Mehr erfahren»" }
+
+          # ── Speisekarte Preise ─────────────────────────────────────────────
+          - label: "Speisekarte – Preise"
+            name: speisekarte_preise
+            widget: object
+            fields:
+
+              - label: "Salate"
+                name: ensaladas
+                widget: object
+                fields:
+                  - { label: "Ensalada mixta",             name: ensalada_mixta,           widget: string }
+                  - { label: "Ensalada de tomate con atún",name: ensalada_tomate_atun,     widget: string }
+                  - { label: "Ensalada de la casa",         name: ensalada_de_la_casa,      widget: string }
+                  - { label: "Ensalada mixta con pollo",    name: ensalada_mixta_con_pollo, widget: string }
+                  - { label: "Ensalada «Los Amigos»",       name: ensalada_los_amigos,      widget: string }
+
+              - label: "Kalte Vorspeisen"
+                name: entremeses_frios
+                widget: object
+                fields:
+                  - { label: "Pan con Alioli",          name: pan_con_alioli,         widget: string }
+                  - { label: "Aceitunas",               name: aceitunas,              widget: string }
+                  - { label: "Queso Manchego",          name: queso_manchego,         widget: string }
+                  - { label: "Jamón Serrano / Ibérico", name: jamon_serrano_iberico,  widget: string, hint: "Format: 12,50 / 21,50" }
+                  - { label: "Jamón con melón",         name: jamon_con_melon,        widget: string }
+                  - { label: "Boquerones en vinagre",   name: boquerones_en_vinagre,  widget: string }
+                  - { label: "Alcachofas a la vinagreta",name: alcachofas_vinagreta,  widget: string }
+                  - { label: "Pimientos del Piquillo",  name: pimientos_del_piquillo, widget: string }
+
+              - label: "Warme Vorspeisen"
+                name: entremeses_calientes
+                widget: object
+                fields:
+                  - { label: "Calamares «Romana»",           name: calamares_romana,             widget: string }
+                  - { label: "Calamares «Tenerife»",         name: calamares_tenerife,           widget: string }
+                  - { label: "Boquerones fritos",            name: boquerones_fritos,            widget: string }
+                  - { label: "Pulpo al ajillo",              name: pulpo_al_ajillo,              widget: string }
+                  - { label: "Gambas a la plancha",          name: gambas_a_la_plancha,          widget: string }
+                  - { label: "Gambas rebozadas",             name: gambas_rebozadas,             widget: string }
+                  - { label: "Gambas al ajillo",             name: gambas_al_ajillo,             widget: string }
+                  - { label: "Gambas de la casa",            name: gambas_de_la_casa,            widget: string }
+                  - { label: "Champiñones al ajillo",        name: champinones_al_ajillo,        widget: string }
+                  - { label: "Pimientos de Padrón",          name: pimientos_de_padron,          widget: string }
+                  - { label: "Cazuela de carne",             name: cazuela_de_carne,             widget: string }
+                  - { label: "Caracoles de la casa",         name: caracoles_de_la_casa,         widget: string }
+                  - { label: "Patatas bravas",               name: patatas_bravas,               widget: string }
+                  - { label: "Patatas con Alioli",           name: patatas_con_alioli,           widget: string }
+                  - { label: "Espagueti con salmón y gambas",name: espagueti_salmon_gambas,      widget: string }
+                  - { label: "Entremeses fríos y calientes", name: entremeses_frios_y_calientes, widget: string }
+
+              - label: "Suppen"
+                name: sopas
+                widget: object
+                fields:
+                  - { label: "Sopa de tomate",  name: sopa_de_tomate,  widget: string }
+                  - { label: "Sopa de pescado", name: sopa_de_pescado, widget: string }
+                  - { label: "Sopa de ajo",     name: sopa_de_ajo,     widget: string }
+
+              - label: "Fischgerichte"
+                name: pescados
+                widget: object
+                fields:
+                  - { label: "Merluza a la plancha",      name: merluza_a_la_plancha,  widget: string }
+                  - { label: "Merluza «Marinera»",        name: merluza_marinera,      widget: string }
+                  - { label: "Merluza en salsa verde",    name: merluza_salsa_verde,   widget: string }
+                  - { label: "Rape a la plancha",         name: rape_a_la_plancha,     widget: string }
+                  - { label: "Rape de la casa",           name: rape_de_la_casa,       widget: string }
+                  - { label: "Rape en salsa verde",       name: rape_salsa_verde,      widget: string }
+                  - { label: "Salmón a la plancha",       name: salmon_a_la_plancha,   widget: string }
+                  - { label: "Salmón con salsa de langosta", name: salmon_salsa_langosta, widget: string }
+                  - { label: "Salmón con salsa de albahaca", name: salmon_salsa_albahaca, widget: string }
+                  - { label: "Langostinos a la plancha",  name: langostinos_a_la_plancha, widget: string }
+                  - { label: "Langostinos al Cava",       name: langostinos_al_cava,   widget: string }
+                  - { label: "Langostinos «Pilpil»",      name: langostinos_pilpil,    widget: string }
+                  - { label: "Parrillada de pescado",     name: parrillada_de_pescado, widget: string }
+
+              - label: "Fleischgerichte"
+                name: carnes
+                widget: object
+                fields:
+                  - { label: "Filete de cerdo – Senfsoße",         name: filete_cerdo_mostaza,        widget: string }
+                  - { label: "Filete de cerdo – Pfeffersoße",      name: filete_cerdo_pimienta_verde, widget: string }
+                  - { label: "Filete de cerdo «Carboneras»",       name: filete_cerdo_carboneras,     widget: string }
+                  - { label: "Bisteck a la plancha",               name: bisteck_a_la_plancha,        widget: string }
+                  - { label: "Bisteck – Pfeffersoße",              name: bisteck_pimienta_verde,      widget: string }
+                  - { label: "Bisteck – Champignonsoße",           name: bisteck_champinones,         widget: string }
+                  - { label: "Bisteck «Carboneras»",               name: bisteck_carboneras,          widget: string }
+                  - { label: "Solomillo de cordero – gegrillt",    name: solomillo_cordero_plancha,   widget: string }
+                  - { label: "Solomillo de cordero – Pfeffersoße", name: solomillo_cordero_pimienta,  widget: string }
+                  - { label: "Solomillo de cordero – Kräuter",     name: solomillo_cordero_hierbas,   widget: string }
+                  - { label: "Parrillada de carne",                name: parrillada_de_carne,         widget: string }
+
+              - label: "Hähnchen"
+                name: pollo
+                widget: object
+                fields:
+                  - { label: "Pechuga de pollo – Knoblauch",  name: pechuga_pollo_ajillo,     widget: string }
+                  - { label: "Hähnchenbrust auf Feldsalat",   name: ensalada_canonigos_pollo, widget: string }
+                  - { label: "Pechuga de pollo – Krabbensoße",name: pechuga_pollo_gambas,     widget: string }
+
+              - label: "Spezialitäten des Hauses"
+                name: especialidades
+                widget: object
+                fields:
+                  - { label: "Paella Especial (2 Pers.)",   name: paella_especial,     widget: string }
+                  - { label: "Paella de pescado (2 Pers.)", name: paella_pescado,      widget: string }
+                  - { label: "Zarzuela de la casa (2 Pers.)",name: zarzuela_de_la_casa,widget: string }
+                  - { label: "Langostinos «al Pedro»",      name: langostinos_al_pedro,widget: string }
+                  - { label: "Conejo al ajillo",            name: conejo_al_ajillo,    widget: string }
+
+              - label: "Dessert"
+                name: postres
+                widget: object
+                fields:
+                  - { label: "Crema Catalana",                    name: crema_catalana,            widget: string }
+                  - { label: "Flan",                              name: flan,                      widget: string }
+                  - { label: "Helado mixto",                      name: helado_mixto,              widget: string }
+                  - { label: "Helado de vainilla con chocolate",  name: helado_vainilla_chocolate, widget: string }
+                  - { label: "Postre sorpresa",                   name: postre_sorpresa,           widget: string }
+
+              - label: "Warme Getränke"
+                name: bebidas_calientes
+                widget: object
+                fields:
+                  - { label: "Café americano",         name: cafe_americano,        widget: string }
+                  - { label: "Cappuccino / Café con leche", name: cappuccino_cafe_leche, widget: string }
+                  - { label: "Cortado",                name: cortado,               widget: string }
+                  - { label: "Café solo",              name: cafe_solo,             widget: string }
+                  - { label: "Café solo doble",        name: cafe_solo_doble,       widget: string }
+                  - { label: "Carajillo",              name: carajillo,             widget: string }
+                  - { label: "Té",                     name: te,                    widget: string }
+                  - { label: "Té con ron",             name: te_con_ron,            widget: string }
+                  - { label: "Cacao",                  name: cacao,                 widget: string }
+                  - { label: "Cacao con nata",         name: cacao_con_nata,        widget: string }
+                  - { label: "Leche",                  name: leche,                 widget: string }
+
+              - label: "Getränke"
+                name: bebidas
+                widget: object
+                fields:
+                  - { label: "Cola / Limo 0,25 l",        name: cola_limo_025,                 widget: string }
+                  - { label: "Cola / Limo 0,5 l",         name: cola_limo_05,                  widget: string }
+                  - { label: "Tonic Water / Bitter Lemon",name: tonic_water_02,                widget: string }
+                  - { label: "Ginger Ale",                name: ginger_ale_02,                 widget: string }
+                  - { label: "Mineralwasser 0,25 l",      name: mineralwasser_025,             widget: string }
+                  - { label: "Mineralwasser 0,75 l",      name: mineralwasser_075,             widget: string }
+                  - { label: "Apfelsaft 0,2 l",           name: apfelsaft_02,                  widget: string }
+                  - { label: "Orangensaft 0,25 l",        name: orangensaft_025,               widget: string }
+                  - { label: "Apfelschorle 0,25 l",       name: apfelschorle_025,              widget: string }
+                  - { label: "Apfelschorle 0,5 l",        name: apfelschorle_05,               widget: string }
+                  - { label: "Bier alkoholfrei 0,33 l",   name: bier_alkoholfrei_033,          widget: string }
+                  - { label: "Alt 0,33 l",                name: bier_alt_033,                  widget: string }
+                  - { label: "Estrella 0,33 l",           name: estrella_033,                  widget: string }
+                  - { label: "Bitburger Pils 0,25 l",     name: bitburger_025,                 widget: string }
+                  - { label: "Bitburger Pils 0,5 l",      name: bitburger_05,                  widget: string }
+                  - { label: "Hofbräu Weisse 0,5 l",      name: hofbrau_weisse_05,             widget: string }
+                  - { label: "Hofbräu Weisse alkoholfrei",name: hofbrau_weisse_alkoholfrei_05, widget: string }
+                  - { label: "Sangría Copa 0,25 l",       name: sangria_copa_025,              widget: string }
+                  - { label: "Sangría Jarra 0,5 l",       name: sangria_jarra_05,              widget: string }
+                  - { label: "Sangría Jarra 1,0 l",       name: sangria_jarra_10,              widget: string }
+                  - { label: "Cava Copa 0,1 l",           name: cava_copa_01,                  widget: string }
+                  - { label: "Cava Flasche 0,75 l",       name: cava_botella_075,              widget: string }
+                  - { label: "Aperol Spritz",             name: aperol_spritz_02,              widget: string }
+                  - { label: "Aguardiente / Aquavit",     name: aguardiente_aquavit,           widget: string }
+                  - { label: "Fernet / Ramazotti",        name: fernet_ramazotti,              widget: string }
+                  - { label: "Wodka / Tequila",           name: wodka_tequila,                 widget: string }
+                  - { label: "Gin",                       name: gin,                           widget: string }
+                  - { label: "Anis",                      name: anis,                          widget: string }
+                  - { label: "Licor 43",                  name: licor_43,                      widget: string }
+                  - { label: "Yerbas",                    name: yerbas,                        widget: string }
+                  - { label: "Ponche",                    name: ponche,                        widget: string }
+                  - { label: "Pacharán",                  name: pacharan,                      widget: string }
+                  - { label: "Johnnie Walker",            name: johnnie_walker,                widget: string }
+                  - { label: "Jim Beam",                  name: jim_beam,                      widget: string }
+                  - { label: "Chivas Regal",              name: chivas_regal,                  widget: string }
+                  - { label: "Jack Daniel's",             name: jack_daniels,                  widget: string }
+                  - { label: "Sherry",                    name: sherry,                        widget: string }
+                  - { label: "Martini",                   name: martini,                       widget: string }
+                  - { label: "Campari",                   name: campari,                       widget: string }
+                  - { label: "Pernod",                    name: pernod,                        widget: string }
+                  - { label: "Brandy 103 / Terry / Veterano", name: brandy_103_terry,          widget: string }
+                  - { label: "Magno",                     name: magno,                         widget: string }
+                  - { label: "103 Negro",                 name: brandy_103_negro,              widget: string }
+                  - { label: "Carlos I.",                 name: carlos_i,                      widget: string }
+                  - { label: "Gran Duque / Cardenal Mendoza", name: gran_duque_cardenal,       widget: string }
+                  - { label: "Lepanto",                   name: lepanto,                       widget: string }
+
+              - label: "Weine"
+                name: vinos
+                widget: object
+                fields:
+                  - { label: "Rotwein Hauswein 0,2 l",  name: rot_hauswein_02,   widget: string }
+                  - { label: "Rotwein Hauswein 0,5 l",  name: rot_hauswein_05,   widget: string }
+                  - { label: "Rotwein Hauswein 1,0 l",  name: rot_hauswein_10,   widget: string }
+                  - { label: "Rotwein Rioja 0,2 l",     name: rot_rioja_02,      widget: string }
+                  - { label: "Rotwein Rioja 0,5 l",     name: rot_rioja_05,      widget: string }
+                  - { label: "Rotwein Rioja 0,75 l",    name: rot_rioja_075,     widget: string }
+                  - { label: "Weißwein Hauswein 0,2 l", name: weiss_hauswein_02, widget: string }
+                  - { label: "Weißwein Hauswein 0,5 l", name: weiss_hauswein_05, widget: string }
+                  - { label: "Weißwein Hauswein 1,0 l", name: weiss_hauswein_10, widget: string }
+                  - { label: "Weißwein Rioja 0,2 l",   name: weiss_rioja_02,    widget: string }
+                  - { label: "Weißwein Rioja 0,5 l",   name: weiss_rioja_05,    widget: string }
+                  - { label: "Weißwein Rioja 0,75 l",  name: weiss_rioja_075,   widget: string }
+                  - { label: "Rosé Hauswein 0,2 l",    name: rose_hauswein_02,  widget: string }
+                  - { label: "Rosé Hauswein 0,5 l",    name: rose_hauswein_05,  widget: string }
+                  - { label: "Rosé Hauswein 1,0 l",    name: rose_hauswein_10,  widget: string }
+                  - { label: "Rosé Rioja 0,2 l",       name: rose_rioja_02,     widget: string }
+                  - { label: "Rosé Rioja 0,5 l",       name: rose_rioja_05,     widget: string }
+                  - { label: "Rosé Rioja 0,75 l",      name: rose_rioja_075,    widget: string }

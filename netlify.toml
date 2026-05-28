@@ -1,0 +1,24 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Netlify – Casa Pedro
+# ─────────────────────────────────────────────────────────────────────────────
+
+[build]
+  publish = "."   # keine Build-Tool, statische Dateien direkt im Root
+
+# Formular-Benachrichtigung: Reservierungsanfragen per E-Mail an Pedro
+# (Netlify sendet automatisch an die hinterlegte E-Mail – im Netlify-Dashboard
+#  unter Forms → reservierung → Settings → Email notifications eintragen.)
+
+# Weiterleitungen: Sicherstellen, dass /admin/ korrekt aufgelöst wird
+[[redirects]]
+  from   = "/admin"
+  to     = "/admin/index.html"
+  status = 200
+
+# Sicherheits-Header
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
