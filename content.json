@@ -13,17 +13,17 @@
     "hinweis": "An Feiertagen können die Öffnungszeiten abweichen. Bitte rufen Sie vorab an."
   },
   "specials": {
-    "aktiv": true,
+    "aktiv": false,
     "eintraege": [
       {
         "name": "Lenas Lieblingsessen!!",
         "beschreibung": "Wer zuerst kommt malt zuerst",
-        "preis": "999ufhuhwfio3"
+        "preis": "12.50"
       }
     ]
   },
   "event_banner": {
-    "aktiv": true,
+    "aktiv": false,
     "text": "Freitag 29.05 Tapas Abend mit besonderen Preisen!",
     "link_url": "https://www.instagram.com/restaurantcasapedro/",
     "link_text": ""
