@@ -13,12 +13,12 @@
     "hinweis": "An Feiertagen können die Öffnungszeiten abweichen. Bitte rufen Sie vorab an."
   },
   "specials": {
-    "aktiv": false,
+    "aktiv": true,
     "eintraege": [
       {
         "name": "Lenas Lieblingsessen!!",
         "beschreibung": "Wer zuerst kommt malt zuerst",
-        "preis": "999"
+        "preis": "999ufhuhwfio3"
       }
     ]
   },
