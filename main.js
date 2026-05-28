@@ -152,9 +152,11 @@
 
     function renderEventBanner(banner) {
       var el = document.getElementById('event-banner');
+      var home = document.getElementById('page-home');
       if (!el) return;
       if (!banner || !banner.aktiv || !banner.text) {
         el.style.display = 'none';
+        if (home) home.style.paddingTop = '';
         return;
       }
       el.style.display = '';
@@ -170,6 +172,10 @@
           linkEl.style.display = 'none';
         }
       }
+      // Offset page so fixed banner doesn't cover content
+      requestAnimationFrame(function() {
+        if (home) home.style.paddingTop = el.offsetHeight + 'px';
+      });
     }
 
     function renderPreise(preise) {
