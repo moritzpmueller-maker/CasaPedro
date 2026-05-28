@@ -1,205 +1,195 @@
 {
   "oeffnungszeiten": {
     "zeilen": [
-      { "tage": "Montag – Samstag", "uhrzeit": "17:00 – 23:00" },
-      { "tage": "Sonntag",          "uhrzeit": "12:00 – 21:00" }
+      {
+        "tage": "Montag – Moritz ist der Beste",
+        "uhrzeit": "17:00 – 23:00"
+      },
+      {
+        "tage": "Sonntag",
+        "uhrzeit": "12:00 – 21:00"
+      }
     ],
     "hinweis": "An Feiertagen können die Öffnungszeiten abweichen. Bitte rufen Sie vorab an."
   },
-
   "specials": {
     "aktiv": false,
     "eintraege": []
   },
-
   "event_banner": {
     "aktiv": false,
     "text": "",
     "link_url": "",
     "link_text": ""
   },
-
   "speisekarte_preise": {
-
-    "ensaladas": {
-      "ensalada_mixta":            "8,50",
-      "ensalada_tomate_atun":      "10,00",
-      "ensalada_de_la_casa":       "13,50",
-      "ensalada_mixta_con_pollo":  "14,00",
-      "ensalada_los_amigos":       "19,50"
-    },
-
-    "entremeses_frios": {
-      "pan_con_alioli":            "6,00",
-      "aceitunas":                 "6,00",
-      "queso_manchego":            "12,00",
-      "jamon_serrano_iberico":     "12,50 / 21,50",
-      "jamon_con_melon":           "14,00",
-      "boquerones_en_vinagre":     "9,50",
-      "alcachofas_vinagreta":      "9,00",
-      "pimientos_del_piquillo":    "9,50"
-    },
-
-    "entremeses_calientes": {
-      "calamares_romana":              "12,00",
-      "calamares_tenerife":            "12,50",
-      "boquerones_fritos":             "10,50",
-      "pulpo_al_ajillo":               "13,50",
-      "gambas_a_la_plancha":           "12,50",
-      "gambas_rebozadas":              "13,00",
-      "gambas_al_ajillo":              "13,00",
-      "gambas_de_la_casa":             "13,50",
-      "champinones_al_ajillo":         "10,50",
-      "pimientos_de_padron":           "10,50",
-      "cazuela_de_carne":              "9,00",
-      "caracoles_de_la_casa":          "9,50",
-      "patatas_bravas":                "6,50",
-      "patatas_con_alioli":            "6,50",
-      "espagueti_salmon_gambas":       "19,00",
-      "entremeses_frios_y_calientes":  "15,50"
-    },
-
-    "sopas": {
-      "sopa_de_tomate":   "7,50",
-      "sopa_de_pescado":  "13,50",
-      "sopa_de_ajo":      "9,00"
-    },
-
-    "pescados": {
-      "merluza_a_la_plancha":    "19,50",
-      "merluza_marinera":        "22,50",
-      "merluza_salsa_verde":     "22,00",
-      "rape_a_la_plancha":       "26,50",
-      "rape_de_la_casa":         "27,50",
-      "rape_salsa_verde":        "27,00",
-      "salmon_a_la_plancha":     "23,00",
-      "salmon_salsa_langosta":   "24,50",
-      "salmon_salsa_albahaca":   "24,50",
-      "langostinos_a_la_plancha":"26,50",
-      "langostinos_al_cava":     "27,50",
-      "langostinos_pilpil":      "27,50",
-      "parrillada_de_pescado":   "24,00"
-    },
-
-    "carnes": {
-      "filete_cerdo_mostaza":          "19,50",
-      "filete_cerdo_pimienta_verde":   "19,50",
-      "filete_cerdo_carboneras":       "19,50",
-      "bisteck_a_la_plancha":          "31,00",
-      "bisteck_pimienta_verde":        "32,50",
-      "bisteck_champinones":           "33,00",
-      "bisteck_carboneras":            "32,50",
-      "solomillo_cordero_plancha":     "26,00",
-      "solomillo_cordero_pimienta":    "27,50",
-      "solomillo_cordero_hierbas":     "28,00",
-      "parrillada_de_carne":           "24,50"
-    },
-
-    "pollo": {
-      "pechuga_pollo_ajillo":     "19,00",
-      "ensalada_canonigos_pollo": "19,50",
-      "pechuga_pollo_gambas":     "20,00"
-    },
-
-    "especialidades": {
-      "paella_especial":       "42,00",
-      "paella_pescado":        "42,00",
-      "zarzuela_de_la_casa":   "48,00",
-      "langostinos_al_pedro":  "27,50",
-      "conejo_al_ajillo":      "23,50"
-    },
-
     "postres": {
-      "crema_catalana":              "6,50",
-      "flan":                        "7,00",
-      "helado_mixto":                "6,50",
-      "helado_vainilla_chocolate":   "8,00",
-      "postre_sorpresa":             "12,00"
+      "crema_catalana": "6,50",
+      "flan": "7,00",
+      "helado_mixto": "6,50",
+      "helado_vainilla_chocolate": "8,00",
+      "postre_sorpresa": "12,00"
     },
-
+    "especialidades": {
+      "paella_especial": "42,00",
+      "paella_pescado": "42,00",
+      "zarzuela_de_la_casa": "48,00",
+      "langostinos_al_pedro": "27,50",
+      "conejo_al_ajillo": "23,50"
+    },
+    "sopas": {
+      "sopa_de_tomate": "7,50",
+      "sopa_de_pescado": "13,50",
+      "sopa_de_ajo": "9,00"
+    },
+    "carnes": {
+      "solomillo_cordero_hierbas": "28,00",
+      "bisteck_a_la_plancha": "31,00",
+      "filete_cerdo_carboneras": "19,50",
+      "filete_cerdo_pimienta_verde": "19,50",
+      "bisteck_carboneras": "32,50",
+      "parrillada_de_carne": "24,50",
+      "bisteck_pimienta_verde": "32,50",
+      "solomillo_cordero_plancha": "26,00",
+      "filete_cerdo_mostaza": "19,50",
+      "solomillo_cordero_pimienta": "27,50",
+      "bisteck_champinones": "33,00"
+    },
+    "entremeses_calientes": {
+      "espagueti_salmon_gambas": "19,00",
+      "patatas_con_alioli": "6,50",
+      "calamares_tenerife": "12,50",
+      "gambas_a_la_plancha": "12,50",
+      "gambas_al_ajillo": "13,00",
+      "entremeses_frios_y_calientes": "15,50",
+      "calamares_romana": "12,00",
+      "pulpo_al_ajillo": "13,50",
+      "cazuela_de_carne": "9,00",
+      "patatas_bravas": "6,50",
+      "boquerones_fritos": "10,50",
+      "gambas_rebozadas": "13,00",
+      "champinones_al_ajillo": "10,50",
+      "gambas_de_la_casa": "13,50",
+      "caracoles_de_la_casa": "9,50",
+      "pimientos_de_padron": "10,50"
+    },
+    "ensaladas": {
+      "ensalada_mixta": "8,50",
+      "ensalada_tomate_atun": "10,00",
+      "ensalada_de_la_casa": "13,50",
+      "ensalada_mixta_con_pollo": "14,00",
+      "ensalada_los_amigos": "19,50"
+    },
     "bebidas_calientes": {
-      "cafe_americano":         "3,00",
-      "cappuccino_cafe_leche":  "3,60",
-      "cortado":                "3,10",
-      "cafe_solo":              "2,90",
-      "cafe_solo_doble":        "4,40",
-      "carajillo":              "5,00",
-      "te":                     "3,00",
-      "te_con_ron":             "5,00",
-      "cacao":                  "3,50",
-      "cacao_con_nata":         "3,70",
-      "leche":                  "2,00"
+      "cafe_solo": "2,90",
+      "carajillo": "5,00",
+      "te_con_ron": "5,00",
+      "leche": "2,00",
+      "cacao_con_nata": "3,70",
+      "cafe_americano": "3,00",
+      "te": "3,00",
+      "cappuccino_cafe_leche": "3,60",
+      "cafe_solo_doble": "4,40",
+      "cacao": "3,50",
+      "cortado": "3,10"
     },
-
+    "pescados": {
+      "parrillada_de_pescado": "24,00",
+      "rape_a_la_plancha": "26,50",
+      "salmon_salsa_langosta": "24,50",
+      "salmon_salsa_albahaca": "24,50",
+      "merluza_marinera": "22,50",
+      "langostinos_al_cava": "27,50",
+      "rape_de_la_casa": "27,50",
+      "langostinos_pilpil": "27,50",
+      "rape_salsa_verde": "27,00",
+      "salmon_a_la_plancha": "23,00",
+      "langostinos_a_la_plancha": "26,50",
+      "merluza_a_la_plancha": "19,50",
+      "merluza_salsa_verde": "22,00"
+    },
     "bebidas": {
-      "cola_limo_025":                    "3,50",
-      "cola_limo_05":                     "6,00",
-      "tonic_water_02":                   "3,50",
-      "ginger_ale_02":                    "3,50",
-      "mineralwasser_025":                "3,00",
-      "mineralwasser_075":                "6,50",
-      "apfelsaft_02":                     "3,20",
-      "orangensaft_025":                  "3,20",
-      "apfelschorle_025":                 "3,00",
-      "apfelschorle_05":                  "5,80",
-      "bier_alkoholfrei_033":             "3,20",
-      "bier_alt_033":                     "3,20",
-      "estrella_033":                     "3,50",
-      "bitburger_025":                    "2,90",
-      "bitburger_05":                     "5,00",
-      "hofbrau_weisse_05":                "5,00",
-      "hofbrau_weisse_alkoholfrei_05":    "5,00",
-      "sangria_copa_025":                 "8,00",
-      "sangria_jarra_05":                 "14,00",
-      "sangria_jarra_10":                 "25,00",
-      "cava_copa_01":                     "7,00",
-      "cava_botella_075":                 "35,00",
-      "aperol_spritz_02":                 "7,50",
-      "aguardiente_aquavit":              "6,50",
-      "fernet_ramazotti":                 "6,50",
-      "wodka_tequila":                    "6,50",
-      "gin":                              "8,00",
-      "anis":                             "6,00",
-      "licor_43":                         "6,00",
-      "yerbas":                           "6,00",
-      "ponche":                           "6,00",
-      "pacharan":                         "6,00",
-      "johnnie_walker":                   "8,00",
-      "jim_beam":                         "7,50",
-      "chivas_regal":                     "10,00",
-      "jack_daniels":                     "8,50",
-      "sherry":                           "5,00",
-      "martini":                          "5,50",
-      "campari":                          "7,00",
-      "pernod":                           "7,00",
-      "brandy_103_terry":                 "6,50",
-      "magno":                            "6,50",
-      "brandy_103_negro":                 "7,50",
-      "carlos_i":                         "8,00",
-      "gran_duque_cardenal":              "9,50",
-      "lepanto":                          "9,50"
+      "jim_beam": "7,50",
+      "aperol_spritz_02": "7,50",
+      "bitburger_05": "5,00",
+      "chivas_regal": "10,00",
+      "aguardiente_aquavit": "6,50",
+      "pernod": "7,00",
+      "carlos_i": "8,00",
+      "apfelsaft_02": "3,20",
+      "cola_limo_05": "6,00",
+      "sherry": "5,00",
+      "apfelschorle_025": "3,00",
+      "bier_alkoholfrei_033": "3,20",
+      "wodka_tequila": "6,50",
+      "gin": "8,00",
+      "sangria_copa_025": "8,00",
+      "cava_copa_01": "7,00",
+      "martini": "5,50",
+      "apfelschorle_05": "5,80",
+      "yerbas": "6,00",
+      "bier_alt_033": "3,20",
+      "brandy_103_terry": "6,50",
+      "mineralwasser_075": "6,50",
+      "sangria_jarra_10": "25,00",
+      "orangensaft_025": "3,20",
+      "cola_limo_025": "3,50",
+      "ponche": "6,00",
+      "jack_daniels": "8,50",
+      "magno": "6,50",
+      "pacharan": "6,00",
+      "mineralwasser_025": "3,00",
+      "brandy_103_negro": "7,50",
+      "licor_43": "6,00",
+      "bitburger_025": "2,90",
+      "sangria_jarra_05": "14,00",
+      "johnnie_walker": "8,00",
+      "campari": "7,00",
+      "hofbrau_weisse_alkoholfrei_05": "5,00",
+      "anis": "6,00",
+      "estrella_033": "3,50",
+      "gran_duque_cardenal": "9,50",
+      "tonic_water_02": "3,50",
+      "fernet_ramazotti": "6,50",
+      "cava_botella_075": "35,00",
+      "hofbrau_weisse_05": "5,00",
+      "ginger_ale_02": "3,50",
+      "lepanto": "9,50"
     },
-
+    "entremeses_frios": {
+      "pan_con_alioli": "6,00",
+      "aceitunas": "6,00",
+      "queso_manchego": "12,00",
+      "jamon_serrano_iberico": "12,50 / 21,50",
+      "jamon_con_melon": "14,00",
+      "boquerones_en_vinagre": "9,50",
+      "alcachofas_vinagreta": "9,00",
+      "pimientos_del_piquillo": "9,50"
+    },
+    "pollo": {
+      "pechuga_pollo_ajillo": "19,00",
+      "ensalada_canonigos_pollo": "19,50",
+      "pechuga_pollo_gambas": "20,00"
+    },
     "vinos": {
-      "rot_hauswein_02":    "5,50",
-      "rot_hauswein_05":    "13,00",
-      "rot_hauswein_10":    "22,00",
-      "rot_rioja_02":       "6,50",
-      "rot_rioja_05":       "14,50",
-      "rot_rioja_075":      "19,00",
-      "weiss_hauswein_02":  "5,50",
-      "weiss_hauswein_05":  "13,00",
-      "weiss_hauswein_10":  "22,00",
-      "weiss_rioja_02":     "6,50",
-      "weiss_rioja_05":     "14,50",
-      "weiss_rioja_075":    "19,00",
-      "rose_hauswein_02":   "5,50",
-      "rose_hauswein_05":   "13,00",
-      "rose_hauswein_10":   "22,00",
-      "rose_rioja_02":      "6,50",
-      "rose_rioja_05":      "14,50",
-      "rose_rioja_075":     "19,00"
+      "rose_rioja_02": "6,50",
+      "rose_hauswein_10": "22,00",
+      "rose_rioja_05": "14,50",
+      "rose_hauswein_02": "5,50",
+      "rose_hauswein_05": "13,00",
+      "rot_hauswein_10": "22,00",
+      "rose_rioja_075": "19,00",
+      "rot_hauswein_02": "5,50",
+      "weiss_hauswein_10": "22,00",
+      "rot_hauswein_05": "13,00",
+      "weiss_hauswein_02": "5,50",
+      "weiss_rioja_02": "6,50",
+      "weiss_hauswein_05": "13,00",
+      "rot_rioja_075": "19,00",
+      "weiss_rioja_05": "14,50",
+      "rot_rioja_02": "6,50",
+      "weiss_rioja_075": "19,00",
+      "rot_rioja_05": "14,50"
     }
-
   }
 }
