@@ -13,7 +13,7 @@
     "hinweis": "An Feiertagen können die Öffnungszeiten abweichen. Bitte rufen Sie vorab an."
   },
   "specials": {
-    "aktiv": false,
+    "aktiv": true,
     "eintraege": [
       {
         "name": "Lenas Lieblingsessen!!",
@@ -23,7 +23,7 @@
     ]
   },
   "event_banner": {
-    "aktiv": false,
+    "aktiv": true,
     "text": "Freitag 29.05 Tapas Abend mit besonderen Preisen!",
     "link_url": "https://www.instagram.com/restaurantcasapedro/",
     "link_text": ""
