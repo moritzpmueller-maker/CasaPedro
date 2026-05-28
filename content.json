@@ -2,7 +2,7 @@
   "oeffnungszeiten": {
     "zeilen": [
       {
-        "tage": "Montag – Moritz ist der Beste",
+        "tage": "Montag – Samstag",
         "uhrzeit": "17:00 – 23:00"
       },
       {
@@ -13,8 +13,14 @@
     "hinweis": "An Feiertagen können die Öffnungszeiten abweichen. Bitte rufen Sie vorab an."
   },
   "specials": {
-    "aktiv": false,
-    "eintraege": []
+    "aktiv": true,
+    "eintraege": [
+      {
+        "name": "Lenas Lieblingsessen!!",
+        "beschreibung": "Wer zuerst kommt malt zuerst",
+        "preis": "999"
+      }
+    ]
   },
   "event_banner": {
     "aktiv": false,
