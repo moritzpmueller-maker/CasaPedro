@@ -13,7 +13,7 @@
     "hinweis": "An Feiertagen können die Öffnungszeiten abweichen. Bitte rufen Sie vorab an."
   },
   "specials": {
-    "aktiv": true,
+    "aktiv": false,
     "eintraege": [
       {
         "name": "Lenas Lieblingsessen!!",
@@ -23,9 +23,9 @@
     ]
   },
   "event_banner": {
-    "aktiv": false,
-    "text": "",
-    "link_url": "",
+    "aktiv": true,
+    "text": "Man hat das alles spaß gemacht",
+    "link_url": "https://www.instagram.com/restaurantcasapedro/",
     "link_text": ""
   },
   "speisekarte_preise": {
