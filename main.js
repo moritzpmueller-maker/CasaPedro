@@ -14,7 +14,7 @@
       var el = document.getElementById('page-' + page);
       if (el) el.style.display = 'block';
       var subnav = document.getElementById('menu-subnav-fixed');
-      if (subnav) subnav.style.display = page === 'speisekarte' ? 'flex' : 'none';
+      if (subnav) subnav.style.display = (page === 'speisekarte' && window.innerWidth > 1100) ? 'flex' : 'none';
       // Wait for reflow after display:block before resetting scroll
       requestAnimationFrame(function() {
         document.documentElement.scrollTop = 0;
