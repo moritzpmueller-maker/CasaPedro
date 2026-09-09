@@ -3,11 +3,11 @@
     "zeilen": [
       {
         "tage": "Montag – Samstag",
-        "uhrzeit": "17:00 – 23:00"
+        "uhrzeit": "17:00 – 23:30"
       },
       {
         "tage": "Sonntag",
-        "uhrzeit": "12:00 – 21:00"
+        "uhrzeit": "16:00 – 21:00"
       }
     ],
     "hinweis": "An Feiertagen können die Öffnungszeiten abweichen. Bitte rufen Sie vorab an."
