@@ -13,7 +13,7 @@
     "hinweis": "An Feiertagen können die Öffnungszeiten abweichen. Bitte rufen Sie vorab an."
   },
   "specials": {
-    "aktiv": true,
+    "aktiv": false,
     "eintraege": [
       {
         "name": "Lenas Lieblingsessen!!",
@@ -23,7 +23,7 @@
     ]
   },
   "event_banner": {
-    "aktiv": true,
+    "aktiv": false,
     "text": "Freitag 29.05 Tapas Abend mit besonderen Preisen!",
     "link_url": "https://www.instagram.com/restaurantcasapedro/",
     "link_text": ""
@@ -80,7 +80,7 @@
       "pimientos_de_padron": "10,50"
     },
     "ensaladas": {
-      "ensalada_mixta": "8000000,50",
+      "ensalada_mixta": "8,50",
       "ensalada_tomate_atun": "10,00",
       "ensalada_de_la_casa": "13,50",
       "ensalada_mixta_con_pollo": "14,00",
