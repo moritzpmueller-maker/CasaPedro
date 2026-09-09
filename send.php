@@ -1,4 +1,10 @@
 <?php
+$FORMULAR_AKTIV = false;
+if (!$FORMULAR_AKTIV) {
+    http_response_code(503);
+    exit('Reservierungen derzeit nur telefonisch');
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     exit('Nur POST erlaubt');

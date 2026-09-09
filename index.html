@@ -378,10 +378,18 @@
           <p class="reservierung-title">Ihren Abend bei uns planen</p>
           <div class="reservierung-divider" aria-hidden="true"></div>
 
+          <!-- Reservierungsformular voruebergehend deaktiviert: Telefonhinweis.
+               Reaktivierung: die beiden hidden-Attribute unten (form + #reservierung-erfolg)
+               entfernen und diesen Hinweis-Block wieder mit hidden versehen. -->
+          <p class="reservierung-title">Reservierung</p>
+          <p class="reservierung-sub">Aufgrund der hohen Nachfrage nehmen wir Tischreservierungen derzeit ausschließlich telefonisch entgegen. Wir freuen uns auf Ihren Anruf.</p>
+          <a href="tel:+49212590023" class="reservierung-btn">0212 590023 anrufen</a>
+
           <form id="reservierung-form"
                 name="reservierung"
                 method="POST"
-                novalidate>
+                novalidate
+                hidden>
             <p style="display:none"><label>Nicht ausfüllen: <input name="bot-field"></label></p>
 
             <div class="form-field">
@@ -441,7 +449,7 @@
             <button type="submit" class="reservierung-btn">Anfrage senden</button>
           </form>
 
-          <div id="reservierung-erfolg" style="display:none" role="status" aria-live="polite">
+          <div id="reservierung-erfolg" style="display:none" role="status" aria-live="polite" hidden>
             <p class="reservierung-erfolg-msg">Vielen Dank – Ihre Reservierung ist eingegangen!<br><br>Ihr Tisch ist reserviert. Wir melden uns nur, falls wir ausgebucht sind oder Rückfragen haben – ansonsten freuen wir uns einfach auf Ihren Besuch.</p>
           </div>
         </div>
