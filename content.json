@@ -16,16 +16,16 @@
     "aktiv": false,
     "eintraege": [
       {
-        "name": "Lenas Lieblingsessen!!",
-        "beschreibung": "Wer zuerst kommt malt zuerst",
+        "name": "Beispiel 1",
+        "beschreibung": "",
         "preis": "12.50"
       }
     ]
   },
   "event_banner": {
     "aktiv": false,
-    "text": "Freitag 29.05 Tapas Abend mit besonderen Preisen!",
-    "link_url": "https://www.instagram.com/restaurantcasapedro/",
+    "text": "Beispiel 2",
+    "link_url": "",
     "link_text": ""
   },
   "speisekarte_preise": {
