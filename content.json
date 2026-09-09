@@ -2,11 +2,11 @@
   "oeffnungszeiten": {
     "zeilen": [
       {
-        "tage": "Montag – Samstag",
+        "tage": "Mo - Sa",
         "uhrzeit": "17:00 – 23:30"
       },
       {
-        "tage": "Sonntag",
+        "tage": "So",
         "uhrzeit": "16:00 – 21:00"
       }
     ],
