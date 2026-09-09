@@ -119,16 +119,37 @@
     }
 
     function renderOeffnungszeiten(oez) {
+      if (!oez) return;
+
       var container = document.getElementById('oez-rows');
-      if (!container || !oez) return;
-      container.innerHTML = oez.zeilen.map(function(z) {
-        return '<div class="oez-row">' +
-          '<span class="oez-day">' + z.tage + '</span>' +
-          '<span class="oez-time">' + z.uhrzeit + '</span>' +
-          '</div>';
-      }).join('');
+      if (container && oez.zeilen) {
+        container.innerHTML = oez.zeilen.map(function(z) {
+          return '<div class="oez-row">' +
+            '<span class="oez-day">' + z.tage + '</span>' +
+            '<span class="oez-time">' + z.uhrzeit + '</span>' +
+            '</div>';
+        }).join('');
+      }
+
       var hinweis = document.getElementById('oez-hinweis');
       if (hinweis && oez.hinweis) hinweis.textContent = oez.hinweis;
+
+      // Topbar (single-line) — keep the clock emoji and replace the text
+      if (oez.zeilen && oez.zeilen.length) {
+        var inline = oez.zeilen.map(function(z) {
+          return z.tage + ' <strong>' + z.uhrzeit + '</strong>';
+        }).join(' · ');
+        var topbar = document.getElementById('topbar-oez');
+        if (topbar) topbar.innerHTML = '🕐 ' + inline;
+
+        // Fill any legal sidebar tables with the same rows
+        var rowsHtml = oez.zeilen.map(function(z) {
+          return '<tr><td>' + z.tage + '</td><td>' + z.uhrzeit + '</td></tr>';
+        }).join('');
+        document.querySelectorAll('.legal-oez-table').forEach(function(tbl) {
+          tbl.innerHTML = rowsHtml;
+        });
+      }
     }
 
     function renderSpecials(specials) {
