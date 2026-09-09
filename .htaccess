@@ -1,0 +1,32 @@
+RewriteEngine On
+
+# HTTPS erzwingen
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# www auf casa-pedro.de umleiten
+RewriteCond %{HTTP_HOST} ^www\.casa-pedro\.de [NC]
+RewriteRule ^(.*)$ https://casa-pedro.de/$1 [R=301,L]
+
+# Alte WordPress-Adressen auf die Startseite
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ / [R=301,L]
+
+# Sicherheits-Header
+<IfModule mod_headers.c>
+  Header set X-Frame-Options "DENY"
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Interne Dateien nicht ausliefern
+<FilesMatch "^(\.ftp-deploy-sync-state\.json|netlify\.toml)$">
+  Require all denied
+</FilesMatch>
+
+# Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 5 minutes"
+</IfModule>

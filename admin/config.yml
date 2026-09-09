@@ -30,7 +30,7 @@ auth:
   avatar_url_claim: avatar_url
 
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
-site_url: https://casa-pedro-solingen.netlify.app
+site_url: https://casa-pedro.de
 
 locale: de
 media_folder: images

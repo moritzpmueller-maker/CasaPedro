@@ -206,7 +206,7 @@
         var btn = form.querySelector('button[type="submit"]');
         if (btn) btn.disabled = true;
         var body = new URLSearchParams(new FormData(form)).toString();
-        fetch('/', {
+        fetch('send.php', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: body
