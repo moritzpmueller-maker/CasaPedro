@@ -28,174 +28,1451 @@
     "link_url": "",
     "link_text": ""
   },
-  "speisekarte_preise": {
-    "postres": {
-      "crema_catalana": "6,50",
-      "flan": "7,00",
-      "helado_mixto": "6,50",
-      "helado_vainilla_chocolate": "8,00",
-      "postre_sorpresa": "12,00"
+  "speisekarte": [
+    {
+      "id": "ensaladas",
+      "titel_es": "Ensaladas",
+      "titel_de": "Salate",
+      "titel_en": "Salads",
+      "nav_label": "Salate",
+      "layout": "einspaltig",
+      "eintraege": [
+        {
+          "typ": "gericht",
+          "name": "Ensalada mixta",
+          "beschreibung_de": "Gemischter Salat",
+          "beschreibung_en": "Mixed salad",
+          "allergene": "G,7",
+          "vegetarisch": true,
+          "preis": "8,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Ensalada de tomate con atún",
+          "beschreibung_de": "Tomaten-Thunfisch-Salat",
+          "beschreibung_en": "Tomato-tuna salad",
+          "allergene": "D,G,7",
+          "vegetarisch": false,
+          "preis": "10,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Ensalada de la casa",
+          "beschreibung_de": "Salat nach Art des Hauses",
+          "beschreibung_en": "Salad à la maison",
+          "allergene": "C,D,G,7",
+          "vegetarisch": false,
+          "preis": "13,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Ensalada mixta con pollo",
+          "beschreibung_de": "Hähnchen-Salat",
+          "beschreibung_en": "Chicken salad",
+          "allergene": "G,7",
+          "vegetarisch": false,
+          "preis": "16,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Ensalada „Los Amigos“",
+          "beschreibung_de": "Salat „Los Amigos“",
+          "beschreibung_en": "Salad „Los Amigos“",
+          "allergene": "E,I,7",
+          "vegetarisch": false,
+          "preis": "21,50",
+          "preis_zweit": ""
+        }
+      ]
     },
-    "especialidades": {
-      "paella_especial": "42,00",
-      "paella_pescado": "42,00",
-      "zarzuela_de_la_casa": "48,00",
-      "langostinos_al_pedro": "27,50",
-      "conejo_al_ajillo": "23,50"
+    {
+      "id": "entremeses-frios",
+      "titel_es": "Entremeses fríos",
+      "titel_de": "Kalte Vorspeisen",
+      "titel_en": "Cold starters",
+      "nav_label": "Kalte Vorspeisen",
+      "layout": "einspaltig",
+      "eintraege": [
+        {
+          "typ": "gericht",
+          "name": "Pan con Alioli",
+          "beschreibung_de": "Brot mit Alioli",
+          "beschreibung_en": "Bread with Alioli",
+          "allergene": "A,B,C",
+          "vegetarisch": true,
+          "preis": "6,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Aceitunas",
+          "beschreibung_de": "Oliven",
+          "beschreibung_en": "Olives",
+          "allergene": "3,5,6,7",
+          "vegetarisch": true,
+          "preis": "6,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Queso Manchego",
+          "beschreibung_de": "Manchego Käse",
+          "beschreibung_en": "Manchego cheese",
+          "allergene": "A",
+          "vegetarisch": true,
+          "preis": "12,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Jamón Serrano / Ibérico",
+          "beschreibung_de": "Serrano / Ibérico Schinken",
+          "beschreibung_en": "Serrano / Iberico ham",
+          "allergene": "",
+          "vegetarisch": false,
+          "preis": "12,50",
+          "preis_zweit": "21,50"
+        },
+        {
+          "typ": "gericht",
+          "name": "Jamón con melón",
+          "beschreibung_de": "Melone mit Schinken",
+          "beschreibung_en": "Melon with ham",
+          "allergene": "",
+          "vegetarisch": false,
+          "preis": "14,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Boquerones en vinagre",
+          "beschreibung_de": "Eingelegte Sardellen",
+          "beschreibung_en": "Pickled anchovies",
+          "allergene": "D",
+          "vegetarisch": false,
+          "preis": "9,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Alcachofas a la vinagreta",
+          "beschreibung_de": "Artischocken in Vinaigrette",
+          "beschreibung_en": "Artichokes in french dressing",
+          "allergene": "",
+          "vegetarisch": true,
+          "preis": "9,00",
+          "preis_zweit": ""
+        }
+      ]
     },
-    "sopas": {
-      "sopa_de_tomate": "7,50",
-      "sopa_de_pescado": "13,50",
-      "sopa_de_ajo": "9,00"
+    {
+      "id": "vegetariano",
+      "titel_es": "Vegetariano",
+      "titel_de": "Vegetarisch",
+      "titel_en": "Vegetarian",
+      "nav_label": "Vegetarisch",
+      "layout": "einspaltig",
+      "eintraege": [
+        {
+          "typ": "gericht",
+          "name": "Plato Vegetariano",
+          "beschreibung_de": "Vegetarischer Teller",
+          "beschreibung_en": "Vegetarian plate",
+          "allergene": "",
+          "vegetarisch": true,
+          "preis": "21,00",
+          "preis_zweit": ""
+        }
+      ]
     },
-    "carnes": {
-      "solomillo_cordero_hierbas": "28,00",
-      "bisteck_a_la_plancha": "31,00",
-      "filete_cerdo_carboneras": "19,50",
-      "filete_cerdo_pimienta_verde": "19,50",
-      "bisteck_carboneras": "32,50",
-      "parrillada_de_carne": "24,50",
-      "bisteck_pimienta_verde": "32,50",
-      "solomillo_cordero_plancha": "26,00",
-      "filete_cerdo_mostaza": "19,50",
-      "solomillo_cordero_pimienta": "27,50",
-      "bisteck_champinones": "33,00"
+    {
+      "id": "entremeses-calientes",
+      "titel_es": "Entremeses calientes",
+      "titel_de": "Warme Vorspeisen",
+      "titel_en": "Warm starters",
+      "nav_label": "Warme Vorspeisen",
+      "layout": "einspaltig",
+      "eintraege": [
+        {
+          "typ": "gericht",
+          "name": "Calamares „Romana“",
+          "beschreibung_de": "Tintenfischringe „Romana“",
+          "beschreibung_en": "Squid rings „Romana“",
+          "allergene": "B,I",
+          "vegetarisch": false,
+          "preis": "12,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Calamares „Tenerife“",
+          "beschreibung_de": "Tintenfischringe „Tenerife“",
+          "beschreibung_en": "Squid rings „Tenerife“",
+          "allergene": "B,I",
+          "vegetarisch": false,
+          "preis": "12,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Boquerones fritos",
+          "beschreibung_de": "Frittierte Sardellen",
+          "beschreibung_en": "Fried anchovies",
+          "allergene": "B,D",
+          "vegetarisch": false,
+          "preis": "10,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Pulpo al ajillo",
+          "beschreibung_de": "Oktopus in Knoblauch",
+          "beschreibung_en": "Octopus in garlic",
+          "allergene": "I",
+          "vegetarisch": false,
+          "preis": "14,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Gambas a la plancha",
+          "beschreibung_de": "Krabben, gegrillt",
+          "beschreibung_en": "Prawns, grilled",
+          "allergene": "E",
+          "vegetarisch": false,
+          "preis": "12,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Gambas rebozadas",
+          "beschreibung_de": "Krabben in Bierteig",
+          "beschreibung_en": "Prawns in pastry made with beer",
+          "allergene": "B,E",
+          "vegetarisch": false,
+          "preis": "13,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Gambas al ajillo",
+          "beschreibung_de": "Krabben in Knoblauch",
+          "beschreibung_en": "Prawns in garlic",
+          "allergene": "E",
+          "vegetarisch": false,
+          "preis": "13,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Gambas de la casa",
+          "beschreibung_de": "Krabben nach Art des Hauses",
+          "beschreibung_en": "Prawns à la maison",
+          "allergene": "A,E",
+          "vegetarisch": false,
+          "preis": "13,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Champiñones al ajillo",
+          "beschreibung_de": "Champignons in Knoblauch",
+          "beschreibung_en": "Mushrooms in garlic",
+          "allergene": "B",
+          "vegetarisch": true,
+          "preis": "10,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Pimientos de Padrón",
+          "beschreibung_de": "Paprika, gebraten mit grobem Meersalz",
+          "beschreibung_en": "Green peppers, fried with coarse sea salt",
+          "allergene": "",
+          "vegetarisch": true,
+          "preis": "10,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Cazuela de carne",
+          "beschreibung_de": "Fleischtopf",
+          "beschreibung_en": "Stew with meat",
+          "allergene": "",
+          "vegetarisch": false,
+          "preis": "9,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Caracoles de la casa",
+          "beschreibung_de": "Schnecken nach Art des Hauses",
+          "beschreibung_en": "Escargots à la maison",
+          "allergene": "A",
+          "vegetarisch": false,
+          "preis": "9,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Patatas bravas",
+          "beschreibung_de": "Scharfe Kartoffeln",
+          "beschreibung_en": "Spicy potatoes",
+          "allergene": "",
+          "vegetarisch": true,
+          "preis": "6,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Patatas con Alioli",
+          "beschreibung_de": "Kartoffeln mit Alioli",
+          "beschreibung_en": "Potatoes with Alioli",
+          "allergene": "A,C",
+          "vegetarisch": true,
+          "preis": "6,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Espagueti con salmón y gambas",
+          "beschreibung_de": "Spaghetti mit Lachs und Krabben",
+          "beschreibung_en": "Spaghetti with salmon and prawns",
+          "allergene": "A,B,D,E,F",
+          "vegetarisch": false,
+          "preis": "20,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Entremeses fríos y calientes",
+          "beschreibung_de": "Kalte und warme Vorspeisen",
+          "beschreibung_en": "Cold and warm mixed starter plate",
+          "allergene": "B,D,E,I,7",
+          "vegetarisch": false,
+          "preis": "15,50",
+          "preis_zweit": ""
+        }
+      ]
     },
-    "entremeses_calientes": {
-      "espagueti_salmon_gambas": "19,00",
-      "patatas_con_alioli": "6,50",
-      "calamares_tenerife": "12,50",
-      "gambas_a_la_plancha": "12,50",
-      "gambas_al_ajillo": "13,00",
-      "entremeses_frios_y_calientes": "15,50",
-      "calamares_romana": "12,00",
-      "pulpo_al_ajillo": "13,50",
-      "cazuela_de_carne": "9,00",
-      "patatas_bravas": "6,50",
-      "boquerones_fritos": "10,50",
-      "gambas_rebozadas": "13,00",
-      "champinones_al_ajillo": "10,50",
-      "gambas_de_la_casa": "13,50",
-      "caracoles_de_la_casa": "9,50",
-      "pimientos_de_padron": "10,50"
+    {
+      "id": "sopas",
+      "titel_es": "Sopas",
+      "titel_de": "Suppen",
+      "titel_en": "Soups",
+      "nav_label": "Suppen",
+      "layout": "einspaltig",
+      "eintraege": [
+        {
+          "typ": "gericht",
+          "name": "Sopa de tomate",
+          "beschreibung_de": "Tomatensuppe",
+          "beschreibung_en": "Tomatosoup",
+          "allergene": "A",
+          "vegetarisch": true,
+          "preis": "7,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Sopa de pescado",
+          "beschreibung_de": "Fischsuppe",
+          "beschreibung_en": "Fishsoup",
+          "allergene": "D,E,I",
+          "vegetarisch": false,
+          "preis": "14,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Sopa de ajo",
+          "beschreibung_de": "Knoblauchsuppe",
+          "beschreibung_en": "Garlicsoup",
+          "allergene": "A,B",
+          "vegetarisch": false,
+          "preis": "10,50",
+          "preis_zweit": ""
+        }
+      ]
     },
-    "ensaladas": {
-      "ensalada_mixta": "8,50",
-      "ensalada_tomate_atun": "10,00",
-      "ensalada_de_la_casa": "13,50",
-      "ensalada_mixta_con_pollo": "14,00",
-      "ensalada_los_amigos": "19,50"
+    {
+      "id": "pescados",
+      "titel_es": "Pescados",
+      "titel_de": "Fischgerichte",
+      "titel_en": "Fish",
+      "nav_label": "Fisch",
+      "layout": "einspaltig",
+      "eintraege": [
+        {
+          "typ": "gericht",
+          "name": "Merluza a la plancha",
+          "beschreibung_de": "Seehecht, gegrillt mit Salzkartoffeln & Gemüse",
+          "beschreibung_en": "Hake, grilled with boiled potatoes & vegetables",
+          "allergene": "D",
+          "vegetarisch": false,
+          "preis": "21,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Merluza a la „Marinera“",
+          "beschreibung_de": "Seehecht „Marinera“ mit Reis & Gemüse",
+          "beschreibung_en": "Hake „Marinera“ with rice & vegetables",
+          "allergene": "D,E,I",
+          "vegetarisch": false,
+          "preis": "24,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Merluza en salsa verde",
+          "beschreibung_de": "Seehecht in grüner Soße mit Reis & Gemüse",
+          "beschreibung_en": "Hake in green sauce with rice & vegetables",
+          "allergene": "B,D",
+          "vegetarisch": false,
+          "preis": "23,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Rape a la plancha",
+          "beschreibung_de": "Seeteufel, gegrillt mit Salzkartoffeln & Gemüse",
+          "beschreibung_en": "Monkfish, grilled with boiled potatoes & vegetables",
+          "allergene": "D",
+          "vegetarisch": false,
+          "preis": "29,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Rape de la casa",
+          "beschreibung_de": "Seeteufel nach Art des Hauses mit Reis & Gemüse",
+          "beschreibung_en": "Monkfish à la maison with rice & vegetables",
+          "allergene": "A,B,D,E,F,I",
+          "vegetarisch": false,
+          "preis": "31,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Rape en salsa verde",
+          "beschreibung_de": "Seeteufel in grüner Soße mit Reis & Gemüse",
+          "beschreibung_en": "Monkfish in green sauce with rice & vegetables",
+          "allergene": "B,D",
+          "vegetarisch": false,
+          "preis": "31,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Salmón a la plancha",
+          "beschreibung_de": "Lachs, gegrillt mit Salzkartoffeln & Gemüse",
+          "beschreibung_en": "Salmon, grilled with boiled potatoes & vegetables",
+          "allergene": "D",
+          "vegetarisch": false,
+          "preis": "25,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Salmón con salsa de langosta",
+          "beschreibung_de": "Lachs in Hummersoße mit Reis & Gemüse",
+          "beschreibung_en": "Salmon in lobster sauce with rice & vegetables",
+          "allergene": "A,B,D,E,F",
+          "vegetarisch": false,
+          "preis": "27,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Salmón con salsa de albahaca",
+          "beschreibung_de": "Lachs in Basilikumsoße mit Reis & Gemüse",
+          "beschreibung_en": "Salmon in basil sauce with rice & vegetables",
+          "allergene": "A,D",
+          "vegetarisch": false,
+          "preis": "27,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Langostinos a la plancha",
+          "beschreibung_de": "Hummerkrabben, gegrillt mit Salzkartoffeln & Gemüse",
+          "beschreibung_en": "King prawns, grilled with boiled potatoes & vegetables",
+          "allergene": "E",
+          "vegetarisch": false,
+          "preis": "28,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Langostinos al Cava",
+          "beschreibung_de": "Hummerkrabben in Schaumweinsoße mit Reis & Gemüse",
+          "beschreibung_en": "King prawns in sparkling wine sauce with rice & vegetables",
+          "allergene": "A,E",
+          "vegetarisch": false,
+          "preis": "29,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Langostinos al „Pilpil“",
+          "beschreibung_de": "Hummerkrabben „Pilpil“ mit Reis & Gemüse",
+          "beschreibung_en": "King prawns „Pilpil“ with rice & vegetables",
+          "allergene": "E",
+          "vegetarisch": false,
+          "preis": "29,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Parrillada de pescado",
+          "beschreibung_de": "Fischteller, gegrillt mit Salzkartoffeln & Gemüse",
+          "beschreibung_en": "Fish plate, grilled with boiled potatoes & vegetables",
+          "allergene": "D,E",
+          "vegetarisch": false,
+          "preis": "27,50",
+          "preis_zweit": ""
+        }
+      ]
     },
-    "bebidas_calientes": {
-      "cafe_solo": "2,90",
-      "carajillo": "5,00",
-      "te_con_ron": "5,00",
-      "leche": "2,00",
-      "cacao_con_nata": "3,70",
-      "cafe_americano": "3,00",
-      "te": "3,00",
-      "cappuccino_cafe_leche": "3,60",
-      "cafe_solo_doble": "4,40",
-      "cacao": "3,50",
-      "cortado": "3,10"
+    {
+      "id": "carnes",
+      "titel_es": "Carnes",
+      "titel_de": "Fleischgerichte",
+      "titel_en": "Meat",
+      "nav_label": "Fleisch",
+      "layout": "einspaltig",
+      "eintraege": [
+        {
+          "typ": "gericht",
+          "name": "Filete de cerdo en salsa de mostaza",
+          "beschreibung_de": "Schweinefilet in Senfsoße mit Kartoffelgratin & Gemüse",
+          "beschreibung_en": "Pork fillet in mustard sauce with potato gratin & vegetables",
+          "allergene": "A,G",
+          "vegetarisch": false,
+          "preis": "22,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Filete de cerdo a la pimienta verde",
+          "beschreibung_de": "Schweinefilet in grüner Pfeffersoße mit Kartoffelgratin & Gemüse",
+          "beschreibung_en": "Pork fillet in green pepper sauce with potato gratin & vegetables",
+          "allergene": "A,B,F",
+          "vegetarisch": false,
+          "preis": "22,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Filete de cerdo „Carboneras“",
+          "beschreibung_de": "Schweinefilet „Carboneras“ mit Kartoffelgratin & Gemüse",
+          "beschreibung_en": "Pork fillet „Carboneras“ with potato gratin & vegetables",
+          "allergene": "A,B,F",
+          "vegetarisch": false,
+          "preis": "22,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Bisteck a la plancha",
+          "beschreibung_de": "Rumpsteak, gegrillt mit Folienkartoffel & Gemüse",
+          "beschreibung_en": "Rumpsteak, grilled with foil potato & vegetables",
+          "allergene": "",
+          "vegetarisch": false,
+          "preis": "33,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Bisteck a la pimienta verde",
+          "beschreibung_de": "Rumpsteak in grüner Pfeffersoße mit Kartoffelgratin & Gemüse",
+          "beschreibung_en": "Rumpsteak in green pepper sauce with potato gratin & vegetables",
+          "allergene": "A,B,F",
+          "vegetarisch": false,
+          "preis": "35,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Bisteck con salsa de champiñones",
+          "beschreibung_de": "Rumpsteak in Champignonsoße mit Kartoffelgratin & Gemüse",
+          "beschreibung_en": "Rumpsteak in mushroom sauce with potato gratin & vegetables",
+          "allergene": "A,B,F",
+          "vegetarisch": false,
+          "preis": "35,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Bisteck „Carboneras“",
+          "beschreibung_de": "Rumpsteak „Carboneras“ mit Kartoffelgratin & Gemüse",
+          "beschreibung_en": "Rumpsteak „Carboneras“ with potato gratin & vegetables",
+          "allergene": "A,B,F",
+          "vegetarisch": false,
+          "preis": "35,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Solomillo de cordero a la plancha",
+          "beschreibung_de": "Lammfilet, gegrillt mit Folienkartoffel & Gemüse",
+          "beschreibung_en": "Lamb fillet, grilled with foil potato & vegetables",
+          "allergene": "",
+          "vegetarisch": false,
+          "preis": "31,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Solomillo de cordero a la pimienta verde",
+          "beschreibung_de": "Lammfilet in grüner Pfeffersoße mit Kartoffelgratin & Gemüse",
+          "beschreibung_en": "Lamb fillet in green pepper sauce with potato gratin & vegetables",
+          "allergene": "A,B,F",
+          "vegetarisch": false,
+          "preis": "33,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Solomillo de cordero con hierbas",
+          "beschreibung_de": "Lammfilet auf Kräutern mit Kartoffelgratin & Gemüse",
+          "beschreibung_en": "Lamb fillet on herbs with potato gratin & vegetables",
+          "allergene": "A,B,F",
+          "vegetarisch": false,
+          "preis": "33,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Parrillada de carne",
+          "beschreibung_de": "Gemischte Fleischplatte, gegrillt mit Folienkartoffel & Gemüse",
+          "beschreibung_en": "Mixed meat plate, grilled with foil potato & vegetables",
+          "allergene": "",
+          "vegetarisch": false,
+          "preis": "27,50",
+          "preis_zweit": ""
+        }
+      ]
     },
-    "pescados": {
-      "parrillada_de_pescado": "24,00",
-      "rape_a_la_plancha": "26,50",
-      "salmon_salsa_langosta": "24,50",
-      "salmon_salsa_albahaca": "24,50",
-      "merluza_marinera": "22,50",
-      "langostinos_al_cava": "27,50",
-      "rape_de_la_casa": "27,50",
-      "langostinos_pilpil": "27,50",
-      "rape_salsa_verde": "27,00",
-      "salmon_a_la_plancha": "23,00",
-      "langostinos_a_la_plancha": "26,50",
-      "merluza_a_la_plancha": "19,50",
-      "merluza_salsa_verde": "22,00"
+    {
+      "id": "pollo",
+      "titel_es": "Pollo",
+      "titel_de": "Hähnchen",
+      "titel_en": "Chicken",
+      "nav_label": "Hähnchen",
+      "layout": "einspaltig",
+      "eintraege": [
+        {
+          "typ": "gericht",
+          "name": "Pechuga de pollo al ajillo",
+          "beschreibung_de": "Hähnchenbrust in Knoblauchsoße mit Reis & Gemüse",
+          "beschreibung_en": "Chicken breast in garlic sauce with rice & vegetables",
+          "allergene": "A,B,F",
+          "vegetarisch": false,
+          "preis": "22,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Ensalada de canónigos con pechuga de pollo",
+          "beschreibung_de": "Hähnchenbrust auf Feldsalat mit Folienkartoffel",
+          "beschreibung_en": "Chicken breast on lamb's lettuce with foil potato",
+          "allergene": "",
+          "vegetarisch": false,
+          "preis": "22,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Pechuga de pollo en salsa de gambas",
+          "beschreibung_de": "Hähnchen in Krabbensoße mit Reis & Gemüse",
+          "beschreibung_en": "Chicken breast in crab sauce with rice & vegetables",
+          "allergene": "A,E",
+          "vegetarisch": false,
+          "preis": "23,00",
+          "preis_zweit": ""
+        }
+      ]
     },
-    "bebidas": {
-      "jim_beam": "7,50",
-      "aperol_spritz_02": "7,50",
-      "bitburger_05": "5,00",
-      "chivas_regal": "10,00",
-      "aguardiente_aquavit": "6,50",
-      "pernod": "7,00",
-      "carlos_i": "8,00",
-      "apfelsaft_02": "3,20",
-      "cola_limo_05": "6,00",
-      "sherry": "5,00",
-      "apfelschorle_025": "3,00",
-      "bier_alkoholfrei_033": "3,20",
-      "wodka_tequila": "6,50",
-      "gin": "8,00",
-      "sangria_copa_025": "8,00",
-      "cava_copa_01": "7,00",
-      "martini": "5,50",
-      "apfelschorle_05": "5,80",
-      "yerbas": "6,00",
-      "bier_alt_033": "3,20",
-      "brandy_103_terry": "6,50",
-      "mineralwasser_075": "6,50",
-      "sangria_jarra_10": "25,00",
-      "orangensaft_025": "3,20",
-      "cola_limo_025": "3,50",
-      "ponche": "6,00",
-      "jack_daniels": "8,50",
-      "magno": "6,50",
-      "pacharan": "6,00",
-      "mineralwasser_025": "3,00",
-      "brandy_103_negro": "7,50",
-      "licor_43": "6,00",
-      "bitburger_025": "2,90",
-      "sangria_jarra_05": "14,00",
-      "johnnie_walker": "8,00",
-      "campari": "7,00",
-      "hofbrau_weisse_alkoholfrei_05": "5,00",
-      "anis": "6,00",
-      "estrella_033": "3,50",
-      "gran_duque_cardenal": "9,50",
-      "tonic_water_02": "3,50",
-      "fernet_ramazotti": "6,50",
-      "cava_botella_075": "35,00",
-      "hofbrau_weisse_05": "5,00",
-      "ginger_ale_02": "3,50",
-      "lepanto": "9,50"
+    {
+      "id": "especialidades",
+      "titel_es": "Especialidades de la casa",
+      "titel_de": "Spezialitäten des Hauses",
+      "titel_en": "Special culinary delights",
+      "nav_label": "Spezialitäten",
+      "layout": "einspaltig",
+      "eintraege": [
+        {
+          "typ": "gericht",
+          "name": "Paella Especial – carne y pescado (2 personas)",
+          "beschreibung_de": "Paella Spezial – Fleisch und Fisch (für 2 Personen)",
+          "beschreibung_en": "Paella special – meat and fish (for 2 persons)",
+          "allergene": "D,E,I",
+          "vegetarisch": false,
+          "preis": "44,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Paella de pescado (2 personas)",
+          "beschreibung_de": "Paella nur mit Fisch (für 2 Personen)",
+          "beschreibung_en": "Paella only with fish (for 2 persons)",
+          "allergene": "D,E,I",
+          "vegetarisch": false,
+          "preis": "46,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Zarzuela de la casa (2 personas)",
+          "beschreibung_de": "Fischtopf nach Art des Hauses (für 2 Personen) mit Reis & Gemüse",
+          "beschreibung_en": "Fish stew á la maison (for 2 persons) with rice & vegetables",
+          "allergene": "B,D,E,I",
+          "vegetarisch": false,
+          "preis": "54,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Langostinos „al Pedro“",
+          "beschreibung_de": "Hummerkrabben „al Pedro“ mit Reis & Gemüse",
+          "beschreibung_en": "King Prawns „al Pedro“ with rice & vegetables",
+          "allergene": "A,B,E,F",
+          "vegetarisch": false,
+          "preis": "30,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Conejo al ajillo",
+          "beschreibung_de": "Kaninchen in Knoblauch mit Folienkartoffel & Gemüse",
+          "beschreibung_en": "Rabbit in garlic with foil potato & vegetables",
+          "allergene": "A,B,F",
+          "vegetarisch": false,
+          "preis": "26,00",
+          "preis_zweit": ""
+        }
+      ]
     },
-    "entremeses_frios": {
-      "pan_con_alioli": "6,00",
-      "aceitunas": "6,00",
-      "queso_manchego": "12,00",
-      "jamon_serrano_iberico": "12,50 / 21,50",
-      "jamon_con_melon": "14,00",
-      "boquerones_en_vinagre": "9,50",
-      "alcachofas_vinagreta": "9,00",
-      "pimientos_del_piquillo": "9,50"
+    {
+      "id": "postres",
+      "titel_es": "Postres",
+      "titel_de": "Dessert",
+      "titel_en": "Dessert",
+      "nav_label": "Dessert",
+      "layout": "einspaltig",
+      "eintraege": [
+        {
+          "typ": "gericht",
+          "name": "Crema Catalana",
+          "beschreibung_de": "Crema Catalana",
+          "beschreibung_en": "",
+          "allergene": "A,B,C",
+          "vegetarisch": false,
+          "preis": "7,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Flan",
+          "beschreibung_de": "Caramelpudding",
+          "beschreibung_en": "",
+          "allergene": "A,B,C",
+          "vegetarisch": false,
+          "preis": "7,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Helado mixto",
+          "beschreibung_de": "Gemischtes Eis",
+          "beschreibung_en": "Mixed ice cream",
+          "allergene": "A",
+          "vegetarisch": false,
+          "preis": "6,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Helado de vainilla con chocolate caliente",
+          "beschreibung_de": "Vanilleeis mit heißer Schokolade",
+          "beschreibung_en": "Vanilla ice cream with hot chocolate",
+          "allergene": "A,H",
+          "vegetarisch": false,
+          "preis": "8,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Postre sorpresa",
+          "beschreibung_de": "Überraschungsdessert",
+          "beschreibung_en": "Surprise dessert",
+          "allergene": "A,B,C,H",
+          "vegetarisch": false,
+          "preis": "14,00",
+          "preis_zweit": ""
+        }
+      ]
     },
-    "pollo": {
-      "pechuga_pollo_ajillo": "19,00",
-      "ensalada_canonigos_pollo": "19,50",
-      "pechuga_pollo_gambas": "20,00"
+    {
+      "id": "bebidas-calientes",
+      "titel_es": "Bebidas calientes",
+      "titel_de": "Warme Getränke",
+      "titel_en": "Hot beverages",
+      "nav_label": "Warme Getränke",
+      "layout": "einspaltig",
+      "eintraege": [
+        {
+          "typ": "gericht",
+          "name": "Café americano",
+          "beschreibung_de": "Kaffee, schwarz",
+          "beschreibung_en": "Coffee, black",
+          "allergene": "4",
+          "vegetarisch": false,
+          "preis": "3,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Cappuccino o Café con leche",
+          "beschreibung_de": "Cappuccino oder Milchkaffee",
+          "beschreibung_en": "Cappuccino or Latte",
+          "allergene": "A,4",
+          "vegetarisch": false,
+          "preis": "4,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Cortado",
+          "beschreibung_de": "Espresso mit Milch",
+          "beschreibung_en": "Espresso with milk",
+          "allergene": "A,4",
+          "vegetarisch": false,
+          "preis": "3,10",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Café solo",
+          "beschreibung_de": "Espresso",
+          "beschreibung_en": "",
+          "allergene": "4",
+          "vegetarisch": false,
+          "preis": "3,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Café solo doble",
+          "beschreibung_de": "Doppelter Espresso",
+          "beschreibung_en": "Double espresso",
+          "allergene": "4",
+          "vegetarisch": false,
+          "preis": "4,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Carajillo",
+          "beschreibung_de": "Espresso mit Anis oder Brandy",
+          "beschreibung_en": "Espresso with anise or brandy",
+          "allergene": "4",
+          "vegetarisch": false,
+          "preis": "5,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Té",
+          "beschreibung_de": "Tee, diverse Sorten",
+          "beschreibung_en": "Tea, diverse sorts",
+          "allergene": "",
+          "vegetarisch": false,
+          "preis": "3,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Té con ron",
+          "beschreibung_de": "Tee mit Rum",
+          "beschreibung_en": "Tea with rum",
+          "allergene": "",
+          "vegetarisch": false,
+          "preis": "6,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Cacao",
+          "beschreibung_de": "Kakao",
+          "beschreibung_en": "hot chocolate",
+          "allergene": "A",
+          "vegetarisch": false,
+          "preis": "4,00",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Cacao con nata",
+          "beschreibung_de": "Kakao mit Sahne",
+          "beschreibung_en": "Hot chocolate with cream",
+          "allergene": "A",
+          "vegetarisch": false,
+          "preis": "4,50",
+          "preis_zweit": ""
+        },
+        {
+          "typ": "gericht",
+          "name": "Leche, fría o caliente",
+          "beschreibung_de": "Milch, kalt oder warm",
+          "beschreibung_en": "Milk, cold or hot",
+          "allergene": "A",
+          "vegetarisch": false,
+          "preis": "2,00",
+          "preis_zweit": ""
+        }
+      ]
     },
-    "vinos": {
-      "rose_rioja_02": "6,50",
-      "rose_hauswein_10": "22,00",
-      "rose_rioja_05": "14,50",
-      "rose_hauswein_02": "5,50",
-      "rose_hauswein_05": "13,00",
-      "rot_hauswein_10": "22,00",
-      "rose_rioja_075": "19,00",
-      "rot_hauswein_02": "5,50",
-      "weiss_hauswein_10": "22,00",
-      "rot_hauswein_05": "13,00",
-      "weiss_hauswein_02": "5,50",
-      "weiss_rioja_02": "6,50",
-      "weiss_hauswein_05": "13,00",
-      "rot_rioja_075": "19,00",
-      "weiss_rioja_05": "14,50",
-      "rot_rioja_02": "6,50",
-      "weiss_rioja_075": "19,00",
-      "rot_rioja_05": "14,50"
+    {
+      "id": "bebidas",
+      "titel_es": "Bebidas",
+      "titel_de": "Getränke",
+      "titel_en": "Beverages",
+      "nav_label": "Getränke",
+      "layout": "zweispaltig",
+      "eintraege": [
+        {
+          "typ": "ueberschrift",
+          "text": "Alkoholfrei"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Coca-Cola, Limo, Orangenlimo",
+          "allergene": "1,3,4,*",
+          "menge": "0,25 l",
+          "preis": "3,70"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Coca-Cola, Limo, Orangenlimo",
+          "allergene": "1,3,4,*",
+          "menge": "0,5 l",
+          "preis": "6,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Tonic Water, Bitter Lemon",
+          "allergene": "1,2,3",
+          "menge": "0,2 l",
+          "preis": "3,70"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Ginger Ale",
+          "allergene": "1,3",
+          "menge": "0,2 l",
+          "preis": "3,70"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Mineralwasser (Taunusquelle)",
+          "allergene": "",
+          "menge": "0,25 l",
+          "preis": "3,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Mineralwasser (Taunusquelle)",
+          "allergene": "",
+          "menge": "0,75 l",
+          "preis": "7,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Apfelsaft 100%",
+          "allergene": "",
+          "menge": "0,2 l",
+          "preis": "3,70"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Orangensaft 100%",
+          "allergene": "",
+          "menge": "0,2 l",
+          "preis": "3,70"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Apfelschorle",
+          "allergene": "",
+          "menge": "0,25 l",
+          "preis": "3,70"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Apfelschorle",
+          "allergene": "",
+          "menge": "0,5 l",
+          "preis": "6,50"
+        },
+        {
+          "typ": "ueberschrift",
+          "text": "Bier · Beer"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Alkoholfrei",
+          "allergene": "B",
+          "menge": "0,33 l",
+          "preis": "3,60"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Alt",
+          "allergene": "B",
+          "menge": "0,33 l",
+          "preis": "3,60"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Estrella",
+          "allergene": "B",
+          "menge": "0,33 l",
+          "preis": "3,70"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Bitburger Pils",
+          "allergene": "B",
+          "menge": "0,25 l",
+          "preis": "3,00"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Bitburger Pils",
+          "allergene": "B",
+          "menge": "0,5 l",
+          "preis": "5,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Hofbräu Münchner Weisse",
+          "allergene": "B",
+          "menge": "0,5 l",
+          "preis": "6,00"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Münchner Weisse alkoholfrei",
+          "allergene": "B",
+          "menge": "0,5 l",
+          "preis": "6,00"
+        },
+        {
+          "typ": "ueberschrift",
+          "text": "Sangría"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Copa · Glas",
+          "allergene": "1,3,J",
+          "menge": "0,25 l",
+          "preis": "8,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Jarra · Krug",
+          "allergene": "1,3,J",
+          "menge": "0,5 l",
+          "preis": "16,00"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Jarra · Krug",
+          "allergene": "1,3,J",
+          "menge": "1,0 l",
+          "preis": "28,00"
+        },
+        {
+          "typ": "ueberschrift",
+          "text": "Cava · Spanischer Sekt"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Copa · Glas",
+          "allergene": "",
+          "menge": "0,1 l",
+          "preis": "7,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Botella · Flasche",
+          "allergene": "",
+          "menge": "0,75 l",
+          "preis": "42,00"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Aperol Spritz",
+          "allergene": "1,2,J",
+          "menge": "0,2 l",
+          "preis": "8,50"
+        },
+        {
+          "typ": "spaltenwechsel",
+          "hinweis": "Ab hier beginnt die rechte Spalte."
+        },
+        {
+          "typ": "ueberschrift",
+          "text": "Spirituosen"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Aguardiente",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "6,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Aquavit",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "6,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Fernet Branca",
+          "allergene": "1",
+          "menge": "4 cl",
+          "preis": "6,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Ramazotti",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "6,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Wodka",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "6,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Tequila",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "6,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Gin",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "8,00"
+        },
+        {
+          "typ": "ueberschrift",
+          "text": "Liköre"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Anis, süß o. trocken",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "6,00"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Licor 43",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "6,00"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Yerbas mallorquinas o ibicencas",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "6,00"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Ponche",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "6,00"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Pacharán",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "6,00"
+        },
+        {
+          "typ": "ueberschrift",
+          "text": "Whiskey"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Johnnie Walker",
+          "allergene": "J",
+          "menge": "4 cl",
+          "preis": "8,00"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Jim Beam",
+          "allergene": "B",
+          "menge": "4 cl",
+          "preis": "7,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Chivas Regal",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "10,00"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Jack Daniel's",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "8,50"
+        },
+        {
+          "typ": "ueberschrift",
+          "text": "Aperitifs"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Sherry dry/medium/cream",
+          "allergene": "",
+          "menge": "6 cl",
+          "preis": "5,00"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Martini bianco/rosso",
+          "allergene": "",
+          "menge": "6 cl",
+          "preis": "5,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Campari pur/Soda/Orangensaft",
+          "allergene": "1",
+          "menge": "6 cl",
+          "preis": "7,00"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Pernod",
+          "allergene": "1",
+          "menge": "6 cl",
+          "preis": "7,00"
+        },
+        {
+          "typ": "ueberschrift",
+          "text": "Brandy"
+        },
+        {
+          "typ": "getraenk",
+          "name": "103, Terry, Veterano",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "6,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Magno",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "6,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "103 Negro",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "7,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Carlos I.",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "8,00"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Gran Duque d'Alba, Cardenal Mendoza",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "9,50"
+        },
+        {
+          "typ": "getraenk",
+          "name": "Lepanto",
+          "allergene": "",
+          "menge": "4 cl",
+          "preis": "9,50"
+        }
+      ]
+    },
+    {
+      "id": "vinos",
+      "titel_es": "Vinos",
+      "titel_de": "Offene Weine",
+      "titel_en": "Open wines",
+      "nav_label": "Weine",
+      "layout": "einspaltig",
+      "eintraege": [
+        {
+          "typ": "ueberschrift",
+          "text": "Rotwein · Red wine"
+        },
+        {
+          "typ": "wein",
+          "name": "Saisonaler Hauswein",
+          "allergene": "3",
+          "beschreibung_de": "Tempranillo-Garnacha. Dunkelrot im Glas mit einem frischen, fruchtbetonten Bukett, im Mund warm und sanft mit feinen Tanninen.",
+          "preise": [
+            {
+              "menge": "0,2 l",
+              "preis": "6,00"
+            },
+            {
+              "menge": "0,5 l",
+              "preis": "14,00"
+            },
+            {
+              "menge": "1,0 l",
+              "preis": "25,00"
+            }
+          ]
+        },
+        {
+          "typ": "wein",
+          "name": "Rioja",
+          "allergene": "3",
+          "beschreibung_de": "Tempranillo. Leichter Rotwein mit toller Frucht und weichem Gerbstoff. Duftet nach orientalischen Gewürzen, Zedernholz und reifen Kirschen. Barriqueausbau.",
+          "preise": [
+            {
+              "menge": "0,2 l",
+              "preis": "7,50"
+            },
+            {
+              "menge": "0,5 l",
+              "preis": "15,50"
+            },
+            {
+              "menge": "0,75 l",
+              "preis": "21,50"
+            }
+          ]
+        },
+        {
+          "typ": "ueberschrift",
+          "text": "Weißwein · White wine"
+        },
+        {
+          "typ": "wein",
+          "name": "Saisonaler Hauswein",
+          "allergene": "3",
+          "beschreibung_de": "Macabeo. Klarer Weißwein mit feiner Struktur, angenehm leicht und bekömmlich. Frisch und fruchtig – trocken, mild, moderate Säure und große Balance.",
+          "preise": [
+            {
+              "menge": "0,2 l",
+              "preis": "6,00"
+            },
+            {
+              "menge": "0,5 l",
+              "preis": "14,00"
+            },
+            {
+              "menge": "1,0 l",
+              "preis": "25,00"
+            }
+          ]
+        },
+        {
+          "typ": "wein",
+          "name": "Rioja",
+          "allergene": "3",
+          "beschreibung_de": "Viura-Chardonnay. Leuchtend gelbe Farbe. Im Aroma dominieren Früchte wie Zitrone, Ananas und Mango. Frischer, sehr angenehmer Wein mit ausgewogener Säure.",
+          "preise": [
+            {
+              "menge": "0,2 l",
+              "preis": "7,50"
+            },
+            {
+              "menge": "0,5 l",
+              "preis": "15,50"
+            },
+            {
+              "menge": "0,75 l",
+              "preis": "21,50"
+            }
+          ]
+        },
+        {
+          "typ": "ueberschrift",
+          "text": "Roséwein · Rosé wine"
+        },
+        {
+          "typ": "wein",
+          "name": "Saisonaler Hauswein",
+          "allergene": "3",
+          "beschreibung_de": "Tempranillo. Rosa mit Noten von reifen Johannisbeeren. In der Nase intensive Aromen roter Früchte. Fruchtig-frisch im Mund, kombiniert mit einem langen und strukturierten Abgang.",
+          "preise": [
+            {
+              "menge": "0,2 l",
+              "preis": "6,00"
+            },
+            {
+              "menge": "0,5 l",
+              "preis": "14,00"
+            },
+            {
+              "menge": "1,0 l",
+              "preis": "25,00"
+            }
+          ]
+        },
+        {
+          "typ": "wein",
+          "name": "Rioja",
+          "allergene": "3",
+          "beschreibung_de": "Garnacha Tinta. Weicher lachsfarbener Roséwein mit einer blumig-fruchtigen Note in der Nase. Im Mund dezente Säure kombiniert mit einem Anflug von Mandelnote.",
+          "preise": [
+            {
+              "menge": "0,2 l",
+              "preis": "7,50"
+            },
+            {
+              "menge": "0,5 l",
+              "preis": "15,50"
+            },
+            {
+              "menge": "0,75 l",
+              "preis": "21,50"
+            }
+          ]
+        }
+      ]
     }
-  }
+  ]
 }

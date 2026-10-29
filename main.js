@@ -52,12 +52,13 @@
 
     // Scrollspy via IntersectionObserver
     (function() {
-      var sectionIds = [
-        'menu-ensaladas','menu-entremeses-frios','menu-entremeses-calientes',
-        'menu-sopas','menu-pescados','menu-carnes','menu-pollo',
-        'menu-especialidades','menu-postres','menu-bebidas-calientes',
-        'menu-bebidas','menu-vinos'
-      ];
+      // Die Sektionen stehen in content.json, nicht hier: einfach alle Anker nehmen.
+      function sectionIds() {
+        return Array.prototype.map.call(
+          document.querySelectorAll('#page-speisekarte .menu-anchor'),
+          function(el) { return el.id; }
+        );
+      }
 
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
@@ -75,11 +76,12 @@
 
       function startScrollspy() {
         observer.disconnect();
-        sectionIds.forEach(function(id) {
+        sectionIds().forEach(function(id) {
           var el = document.getElementById(id);
           if (el) observer.observe(el);
         });
       }
+      window.startScrollspy = startScrollspy;
 
       function stopScrollspy() {
         observer.disconnect();
@@ -111,7 +113,7 @@
           renderOeffnungszeiten(data.oeffnungszeiten);
           renderSpecials(data.specials);
           renderEventBanner(data.event_banner);
-          renderPreise(data.speisekarte_preise);
+          renderSpeisekarte(data.speisekarte);
         })
         .catch(function(err) {
           console.warn('content.json konnte nicht geladen werden:', err);
@@ -199,23 +201,31 @@
       });
     }
 
-    function renderPreise(preise) {
-      if (!preise) return;
-      document.querySelectorAll('[data-price-key]').forEach(function(el) {
-        var parts   = el.dataset.priceKey.split('.');
-        var section = parts[0];
-        var field   = parts[1];
-        if (!preise[section] || preise[section][field] === undefined) return;
-        var preis = preise[section][field];
-        if (el.classList.contains('menu-row-price-split')) {
-          // "12,50 / 21,50" → "12,50&nbsp;€ / 21,50&nbsp;€"
-          el.innerHTML = preis.split(' / ').map(function(p) {
-            return p + '&nbsp;€';
-          }).join(' / ');
-        } else {
-          el.innerHTML = preis + '&nbsp;€';
-        }
-      });
+    // ── Speisekarte ────────────────────────────────────────────────────────
+    // Im Normalfall ist die Karte beim Deploy schon als statisches HTML
+    // eingebaut (tools/render-menu.js). Dann passiert hier nichts.
+    // Ist der Container leer (lokale Vorschau, CMS-Preview), bauen wir sie
+    // im Browser aus denselben Daten.
+    function renderSpeisekarte(sections) {
+      if (!Array.isArray(sections) || !sections.length) return;
+      if (!window.CasaPedroMenu) return;
+
+      var mount = document.getElementById('menu-mount');
+      if (!mount || mount.textContent.trim() !== '') return;
+
+      mount.innerHTML = window.CasaPedroMenu.buildMenu(sections);
+
+      var sep = document.querySelector('#menu-subnav-fixed .menu-subnav-sep');
+      if (sep) {
+        var alt = document.querySelectorAll('#menu-subnav-fixed .menu-subnav-link');
+        Array.prototype.forEach.call(alt, function(a) { a.remove(); });
+        sep.insertAdjacentHTML('afterend', window.CasaPedroMenu.buildSubnav(sections));
+      }
+
+      if (document.getElementById('page-speisekarte').style.display === 'block' &&
+          typeof window.startScrollspy === 'function') {
+        window.startScrollspy();
+      }
     }
 
     // ── Reservation form: AJAX submit so the page doesn't reload ────────────
