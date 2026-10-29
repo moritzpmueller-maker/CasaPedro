@@ -12,6 +12,14 @@ jobs:
       - name: Code holen
         uses: actions/checkout@v4
 
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Speisekarte in index.html rendern
+        run: node tools/render-menu.js
+
       - name: Per FTPS hochladen
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
@@ -24,5 +32,6 @@ jobs:
             **/.git*
             **/.git*/**
             **/node_modules/**
+            tools/**
             netlify.toml
             README.md
