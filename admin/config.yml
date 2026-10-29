@@ -142,7 +142,10 @@ collections:
                     name: gericht
                     summary: "{{fields.name}}  ·  {{fields.preis}} €"
                     fields:
-                      - { label: "Name (spanisch)", name: name, widget: string }
+                      - label: "Name (spanisch)"
+                        name: name
+                        widget: string
+                        hint: "Stehen auf einer Zeile zwei Produkte mit unterschiedlichen Kürzeln, schreib die Kürzel direkt in Klammern hinter das jeweilige Produkt, z. B. Coca-Cola (1,3,4,*), Limo, Orangenlimo (1,3). Das Feld Allergene bleibt dann leer."
                       - { label: "Beschreibung deutsch",  name: beschreibung_de, widget: string, required: false }
                       - { label: "Beschreibung englisch", name: beschreibung_en, widget: string, required: false }
                       - label: "Allergene und Zusatzstoffe"
@@ -190,7 +193,10 @@ collections:
                     name: wein
                     summary: "{{fields.name}}"
                     fields:
-                      - { label: "Name", name: name, widget: string }
+                      - label: "Name"
+                        name: name
+                        widget: string
+                        hint: "Stehen auf einer Zeile zwei Produkte mit unterschiedlichen Kürzeln, schreib die Kürzel direkt in Klammern hinter das jeweilige Produkt, z. B. Coca-Cola (1,3,4,*), Limo, Orangenlimo (1,3). Das Feld Allergene bleibt dann leer."
                       - label: "Allergene und Zusatzstoffe"
                         name: allergene
                         widget: string

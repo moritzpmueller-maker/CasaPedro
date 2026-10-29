@@ -40,7 +40,7 @@
       ? '<p class="menu-row-price-split">' + preis(e.preis) + ' / ' + preis(e.preis_zweit) + '</p>'
       : '<p class="menu-row-price">' + preis(e.preis) + '</p>';
     return '<div class="menu-row"><div class="menu-row-info">' +
-      '<p class="menu-row-name">' + esc(e.name) + vegBadge(e.vegetarisch) + '</p>' +
+      '<p class="menu-row-name">' + nameMitCodes(e.name) + vegBadge(e.vegetarisch) + '</p>' +
       (desc ? '<p class="menu-row-desc">' + desc + '</p>' : '') +
       '</div>' + preisHtml + '</div>';
   }
@@ -65,7 +65,7 @@
         '<span class="menu-row-wine-vol">· ' + esc(p.menge) + '</span></div>';
     }).join('');
     return '<div class="menu-row" style="align-items:flex-start;"><div class="menu-row-info">' +
-      '<p class="menu-row-name">' + esc(e.name) + allergen(e.allergene) + '</p>' +
+      '<p class="menu-row-name">' + nameMitCodes(e.name) + allergen(e.allergene) + '</p>' +
       (e.beschreibung_de ? '<p class="menu-wine-desc">' + esc(e.beschreibung_de) + '</p>' : '') +
       '</div><div class="menu-row-wine-prices">' + preise + '</div></div>';
   }
