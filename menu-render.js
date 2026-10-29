@@ -45,10 +45,16 @@
       '</div>' + preisHtml + '</div>';
   }
 
+  function nameMitCodes(s) {
+    return esc(s).replace(/\(([A-N0-9,\*]+)\)/g, function (_, code) {
+      return '<span class="allergen">(' + code + ')</span>';
+    });
+  }
+
   function rowGetraenk(e) {
     var vol = e.menge ? ' <span class="menu-row-bev-vol">' + esc(e.menge) + '</span>' : '';
     return '<div class="menu-row-beverage">' +
-      '<span class="menu-row-bev-name">' + esc(e.name) + allergen(e.allergene) + vol + '</span>' +
+      '<span class="menu-row-bev-name">' + nameMitCodes(e.name) + allergen(e.allergene) + vol + '</span>' +
       '<span class="menu-row-bev-price">' + preis(e.preis) + '</span></div>';
   }
 
