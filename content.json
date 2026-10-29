@@ -1334,7 +1334,7 @@
     },
     {
       "id": "vinos",
-      "titel_es": "Vinooos",
+      "titel_es": "Vinos",
       "titel_de": "Offene Weine",
       "titel_en": "Open wines",
       "nav_label": "Weine",
@@ -1471,21 +1471,6 @@
               "preis": "21,50"
             }
           ]
-        }
-      ]
-    },
-    {
-      "layout": "einspaltig",
-      "id": "test",
-      "titel_es": "Testo",
-      "titel_de": "Test",
-      "titel_en": "Test",
-      "eintraege": [
-        {
-          "typ": "gericht",
-          "vegetarisch": false,
-          "name": "Essen",
-          "preis": "8 ruo"
         }
       ]
     }
